@@ -35,11 +35,12 @@
                     <img src="{{ url('storage/photos/'.$data->foto)}}" width="100">
                 </td>
                 <td>{{ $data->id_kategori }}</td>
-                <td>{{ $data->no_hp }}</td>
+                <td>+62{{ $data->no_hp }}</td>
                 <td>{{ $data->created_by }}</td>
                 <td>{{ $data->update_by }}</td>
                 <td>
-                    <button wire:click="getProduk({{$data->id}})" class="btn btn-sm btn-info text-white">Edit</button>
+                    <a href="/produkUpdate/{{$data->id}}" class="btn btn-primary btn-sm">Edit Data</a>
+                    {{-- <button wire:click="getProduk({{$data->id}})" class="btn btn-sm btn-info text-white">Edit</button> --}}
                     <button wire:click="destroy({{$data->id}})" class="btn btn-sm btn-danger text-white">Delete</button>
                 </td>
             </tr>

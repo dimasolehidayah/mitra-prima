@@ -33,7 +33,7 @@ class ProdukCreate extends Component
         'deskripsi' => 'required',
         'foto' => 'image|mimes:png,jpg,bmp,jpeg',
         'id_kategori' => 'required',
-        'no_hp' => 'required',
+        'no_hp' => 'required|max:20',
     ];
     protected $messages = [
         'nama_produk.required' => 'nama required',
@@ -41,8 +41,9 @@ class ProdukCreate extends Component
         'deskripsi.required' => 'deskripsi required',
         'foto.image' => 'foto required',
         'foto.mimes' => 'foto extension jpg,png,jpeg,bmp',
-        'id_kategori.required' => 'id kategori required'
-
+        'id_kategori.required' => 'id kategori required',
+        'no_hp.required' => 'no_handphone required',
+        'no_hp.max' => 'max 20 character',
     ];
 
     public function store()
@@ -62,6 +63,7 @@ class ProdukCreate extends Component
             'created_by' => Auth::user()->id,
             'update_by' => Auth::user()->id,
         ]);
+        session()->flash('message', 'Contact was Store!');
         redirect('/produk');
     }
 }

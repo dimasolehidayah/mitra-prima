@@ -1,11 +1,11 @@
-
-@section('title','Tambah Produk')
-@section('header','Tambah Produk')
+@section('title','Update Produk')
+@section('header','Update Produk')
 
 
 
 <div>
-    <form wire:submit.prevent="store">
+    <form wire:submit.prevent="update">
+        <input type="hidden" name="" wire:model="produkId">
         <div class="form-group">
             <label>Nama Produk</label>
             <input type="text" wire:model="nama_produk" class="form-control
@@ -62,4 +62,5 @@
 
     </form>
 </div>
+
 

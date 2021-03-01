@@ -12,15 +12,15 @@ class ProdukIndex extends Component
     {
         $produk = Produk::all();
 
-        return view('livewire.produk-index',['produk'=>$produk])
-        ->extends('layout.template');
+        return view('livewire.produk-index', ['produk' => $produk])
+            ->extends('layout.template');
     }
     public function destroy($id)
     {
-        if($id) {
+        if ($id) {
             $data = Produk::find($id);
-            if ($data->photo <> "") {
-                unlink(public_path('storage/photos/') .'/'. $data->photo);
+            if ($data->foto <> "") {
+                unlink(public_path('storage/photos/') . '/' . $data->foto);
             }
             $data->delete();
 
@@ -30,6 +30,8 @@ class ProdukIndex extends Component
     public function getProduk($id)
     {
         $produk = Produk::find($id);
-        $this->emit('getProduk', $produk);
+        // print_r($produk->get());
+        // echo "Berhasil";
+        $this->emit('showProduk', $produk);
     }
 }
