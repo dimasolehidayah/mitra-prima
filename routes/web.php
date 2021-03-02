@@ -13,11 +13,8 @@ use App\Http\Livewire\KategoriIndex;
 use App\Http\Livewire\KategoriCreate;
 use App\Http\Livewire\KategoriUpdate;
 
-<<<<<<< Updated upstream
 use App\Http\Controllers\ProductController;
 use App\Http\Livewire\User;
-=======
->>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
@@ -42,10 +39,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/produk', ProdukIndex::class);
 Route::get('/produkCreate', ProdukCreate::class);
 Route::get('/produkUpdate/{id}', ProdukUpdate::class);
-<<<<<<< Updated upstream
 Route::get('/user', User::class);
-=======
-
 //Slider
 Route::get('/slider', SliderIndex::class);
 Route::get('/sliderCreate', SliderCreate::class);
@@ -55,4 +49,3 @@ Route::get('/sliderUpdate/{id}', SliderUpdate::class);
 Route::get('/kategori', KategoriIndex::class);
 Route::get('/kategoriCreate', KategoriCreate::class);
 Route::get('/kategoriUpdate/{id}', KategoriUpdate::class);
->>>>>>> Stashed changes

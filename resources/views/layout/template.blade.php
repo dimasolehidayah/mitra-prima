@@ -8,12 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content />
     <meta name="author" content />
-    <title>@yield('title') - SB Admin Pro</title>
+    <title>@yield('title') - Mitra Prima</title>
     <link href="{{url('template/css/styles.css')}}" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
-        crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet"
-        crossorigin="anonymous" />
     <link rel="icon" type="image/x-icon" href="{{'template/assets/img/favicon.png'}}" />
     <script data-search-pseudo-elements defer
         src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -27,28 +23,13 @@
         <a class="navbar-brand" href="#"> Mitra-Prima </a>
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#"><i
                 data-feather="menu"></i></button>
-        <form class="form-inline mr-auto d-none d-md-block">
-            <div class="input-group input-group-joined input-group-solid">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <div class="input-group-append">
-                    <div class="input-group-text"><i data-feather="search"></i></div>
-                </div>
-            </div>
-        </form>
         <ul class="navbar-nav align-items-center ml-auto">
-
-            <li class="nav-item dropdown no-caret mr-3 d-md-none">
-                <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="searchDropdown" href="#" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="search"></i></a>
-                <!-- Dropdown - Search-->
-
-            </li>
 
             <li class="nav-item dropdown no-caret mr-2 dropdown-user">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
                     href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false"><img class="img-fluid"
-                        src="https://source.unsplash.com/QAB-WJcbgJk/60x60" /></a>
+                         src="https://source.unsplash.com/QAB-WJcbgJk/60x60" /></a>
                 <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
                     aria-labelledby="navbarDropdownUserImage">
                     <h6 class="dropdown-header d-flex align-items-center">
@@ -101,7 +82,11 @@
                     </div>
                 </header>
                 <!-- Main page content-->
+                <div class="container mt-n10">
+                    <div class="card mb-4">
                 @yield('content')
+                    </div>
+                </div>
             </main>
             <footer class="footer mt-auto footer-light">
                 <div class="container-fluid">
@@ -124,12 +109,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" crossorigin="anonymous"></script>
     <script src="{{'template/assets/demo/chart-area-demo.js'}}"></script>
     <script src="{{'template/assets/demo/chart-bar-demo.js'}}"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="{{'template/assets/demo/datatables-demo.js'}}"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" crossorigin="anonymous"></script>
     <script src="{{'template/assets/demo/date-range-picker-demo.js'}}"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     @livewireScripts
     {{-- <script src="{{'template/js/sb-customizer.js'}}"></script>
     <sb-customizer project="sb-admin-pro"></sb-customizer> --}}

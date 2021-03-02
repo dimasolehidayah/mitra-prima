@@ -1,7 +1,6 @@
 @section('title','Pengguna')
 @section('header','Pengguna')
-<div class="container mt-n10">
-    <div class="card mb-4">
+<div>
         <div class="card-header">Data Pengguna
 
             <button type="button" class="btn btn-primary" wire:click.prevent="ClearForm" data-toggle="modal" data-target="#adduser">
@@ -29,6 +28,13 @@
                 </button>
             </div>
             @endif
+            <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                    <input wire:model="search" type="text" placeholder="Search..." class="form-control">
+                </div>
+            </div>
+            <br>
             <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped table-sm">
                 <thead>
@@ -58,7 +64,6 @@
             </div>
               {{ $users->links() }}
         </div>
-    </div>
 
     <!-- Modal Add-->
     <div wire:ignore.self class="modal fade" id="adduser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
