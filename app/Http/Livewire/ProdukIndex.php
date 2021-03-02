@@ -5,15 +5,24 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Produk;
+use Livewire\WithPagination;
 
 class ProdukIndex extends Component
 {
+    use WithPagination;
+
+    public $paginate = 2;
+    public $search;
+
+    protected $paginationTheme = 'bootstrap';
+
     public function render()
     {
-        $produk = Produk::all();
-
-        return view('livewire.produk-index', ['produk' => $produk])
-            ->extends('layout.template');
+        return view('livewire.produk-index', [
+            'produk' => $this->search === null ?
+            Produk::latest()->paginate($this->paginate) :
+            Produk::latest()->where('nama_produk', 'like', '%' . $this->search .'%')->paginate($this->paginate)
+        ])->extends('layout.template');
     }
     public function destroy($id)
     {

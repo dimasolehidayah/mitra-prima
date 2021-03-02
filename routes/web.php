@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Livewire\ProdukIndex;
 use App\Http\Livewire\ProdukCreate;
 use App\Http\Livewire\ProdukUpdate;
+
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------

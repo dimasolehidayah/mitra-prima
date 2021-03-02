@@ -86,6 +86,7 @@ class ProdukUpdate extends Component
                 $this->foto->storeAs('photos', $data['foto']);
             }
             $produk->update($data);
+            session()->flash('message', 'Contact was Updated!');
             redirect('/produk', $produk);
         }
     }

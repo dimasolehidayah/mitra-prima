@@ -3,7 +3,7 @@
 
 
 
-<div>
+<div class="container">
     <form wire:submit.prevent="update">
         <input type="hidden" name="" wire:model="produkId">
         <div class="form-group">

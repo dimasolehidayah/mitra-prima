@@ -4,8 +4,9 @@
 
 
 
-<div>
+<div class="container">
     <form wire:submit.prevent="store">
+        <br>
         <div class="form-group">
             <label>Nama Produk</label>
             <input type="text" wire:model="nama_produk" class="form-control
