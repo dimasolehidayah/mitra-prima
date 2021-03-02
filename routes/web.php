@@ -8,6 +8,7 @@ use App\Http\Livewire\ProdukCreate;
 use App\Http\Livewire\ProdukUpdate;
 
 use App\Http\Controllers\ProductController;
+use App\Http\Livewire\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/produk', ProdukIndex::class);
 Route::get('/produkCreate', ProdukCreate::class);
 Route::get('/produkUpdate/{id}', ProdukUpdate::class);
+Route::get('/user', User::class);

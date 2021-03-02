@@ -1,7 +1,8 @@
 @section('title','Produk')
 @section('header','Produk')
-<div class="container">
-    <hr>
+<div class="container mt-n10">
+    <div class="card mb-4">
+        <div class="card-header">
     <div>
     <a href="/produkCreate" class="btn btn-primary btn-sm">Tambah Data</a>
     </div>
@@ -13,7 +14,8 @@
                 </button>
         </div>
     @endif
-
+        </div>
+        <div class="card-body">
     <div class="row mt-3">
         <div class="col">
             <select wire:model="paginate" name="" id="" class="form-control form-control-sm w-auto">
@@ -64,4 +66,5 @@
         </tbody>
     </table>
     {{ $produk->links() }}
+    </div>
 </div>

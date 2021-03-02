@@ -10,5 +10,9 @@
             <div class="nav-link-icon"><i data-feather="bar-chart"></i></div>
             Produk
         </a>
+        <a class="nav-link" href="/user">
+            <div class="nav-link-icon"><i class="far fa-user"></i></div>
+            Pengguna
+        </a>
     </div>
 </div>
