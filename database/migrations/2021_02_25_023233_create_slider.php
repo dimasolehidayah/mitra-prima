@@ -17,7 +17,8 @@ class CreateSlider extends Migration
             $table->increments('id');
             $table->string('judul',50);
             $table->string('gambar',50);
-            $table->integer('update_by');
+            $table->unsignedBigInteger('update_by');
+            $table->foreign('update_by')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ class ProdukCreate extends Component
 
     public function render()
     {
-        return view('livewire.produk-create')
+        return view('livewire.produk.produk-create')
             ->extends('layout.template');
     }
     public function updated($propertyName)
@@ -63,7 +63,7 @@ class ProdukCreate extends Component
             'created_by' => Auth::user()->id,
             'update_by' => Auth::user()->id,
         ]);
-        session()->flash('message', 'Contact was Store!');
+        session()->flash('message', 'Produk was Store!');
         redirect('/produk');
     }
 }

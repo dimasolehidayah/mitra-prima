@@ -23,7 +23,7 @@ class ProdukUpdate extends Component
     ];
     public function render()
     {
-        return view('livewire.produk-update')
+        return view('livewire.produk.produk-update')
             ->extends('layout.template');
     }
 
@@ -86,7 +86,7 @@ class ProdukUpdate extends Component
                 $this->foto->storeAs('photos', $data['foto']);
             }
             $produk->update($data);
-            session()->flash('message', 'Contact was Updated!');
+            session()->flash('message', 'Produk was Updated!');
             redirect('/produk', $produk);
         }
     }

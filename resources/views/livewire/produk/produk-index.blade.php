@@ -14,9 +14,14 @@
                 </button>
         </div>
     @endif
+<<<<<<< Updated upstream:resources/views/livewire/produk-index.blade.php
         </div>
         <div class="card-body">
     <div class="row mt-3">
+=======
+
+    <div class="row mt-3 mb-3">
+>>>>>>> Stashed changes:resources/views/livewire/produk/produk-index.blade.php
         <div class="col">
             <select wire:model="paginate" name="" id="" class="form-control form-control-sm w-auto">
                 <option value="2">2</option>
@@ -29,8 +34,8 @@
         </div>
     </div>
 
-    <table class="table mt-3">
-        <thead class="thead-dark">
+    <table class="table table-bordered table-striped">
+        <thead class="table-info">
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama Produk</th>

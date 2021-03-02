@@ -18,7 +18,7 @@ class ProdukIndex extends Component
 
     public function render()
     {
-        return view('livewire.produk-index', [
+        return view('livewire.produk.produk-index', [
             'produk' => $this->search === null ?
             Produk::latest()->paginate($this->paginate) :
             Produk::latest()->where('nama_produk', 'like', '%' . $this->search .'%')->paginate($this->paginate)
