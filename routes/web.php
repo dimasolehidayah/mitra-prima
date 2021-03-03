@@ -39,7 +39,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/produk', ProdukIndex::class);
 Route::get('/produkCreate', ProdukCreate::class);
 Route::get('/produkUpdate/{id}', ProdukUpdate::class);
-Route::get('/user', User::class);
+
 //Slider
 Route::get('/slider', SliderIndex::class);
 Route::get('/sliderCreate', SliderCreate::class);
@@ -49,3 +49,5 @@ Route::get('/sliderUpdate/{id}', SliderUpdate::class);
 Route::get('/kategori', KategoriIndex::class);
 Route::get('/kategoriCreate', KategoriCreate::class);
 Route::get('/kategoriUpdate/{id_kategori}', KategoriUpdate::class);
+
+Route::get('/user', User::class);
