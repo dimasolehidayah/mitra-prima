@@ -8,10 +8,10 @@ use Livewire\Component;
 class KategoriUpdate extends Component
 {
 
-    public $id_kategori;
+    public $kategoriId;
     public $nama;
     public $deskripsi;
-    public $kategoriId;
+
 
     public function render()
     {
@@ -20,25 +20,26 @@ class KategoriUpdate extends Component
     }
 
     protected $rules = [
-
-        'id_kategori' => 'required',
         'nama' => 'required',
         'deskripsi' => 'required',
 
     ];
     protected $messages = [
-        'id_kategori.required' => 'id kategori required',
         'nama.required' => 'nama required',
         'deskripsi.required' => 'deskripsi required',
     ];
-    public function mount(Kategori $kategori)
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+    public function mount($id_kategori)
     {
         // echo "<pre>";
-        // print_r($produk->first()->id);
-        $kategori = $kategori->first();
+        // echo $id;
+        // print_r($kategori->first()->id);
+        $kategori = Kategori::where('id_kategori', $id_kategori)->first();
         if ($kategori) {
-            $this->kategoriId = $kategori['id'];
-            $this->id_kategori = $kategori['id_kategori'];
+            $this->kategoriId = $kategori['id_kategori'];
             $this->nama = $kategori['nama'];
             $this->deskripsi = $kategori['deskripsi'];
         }
@@ -46,13 +47,13 @@ class KategoriUpdate extends Component
     public function update()
     {
 
-        if ($this->kategoriId) {
-            $kategori = Kategori::find($this->kategoriId);
-            $this->validate();
+            $this->kategoriId;
+            $kategori = Kategori::where('id_kategori',$this->kategoriId);
+            $data = $this->validate();
 
-            $kategori->update();
+            $kategori->update($data);
             session()->flash('message', 'Kategori was Updated!');
             redirect('/kategori', $kategori);
-        }
+
     }
 }

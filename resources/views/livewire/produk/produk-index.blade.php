@@ -14,9 +14,13 @@
                 </button>
         </div>
     @endif
+<<<<<<< Updated upstream
 </div>
 <div class="card-body">
 {{-- <div class="row mt-3"> --}}
+=======
+
+>>>>>>> Stashed changes
     <div class="row mt-3 mb-3">
         <div class="col">
             <select wire:model="paginate" name="" id="" class="form-control form-control-sm w-auto">

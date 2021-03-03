@@ -54,11 +54,11 @@ class ProdukUpdate extends Component
         'no_hp.max' => 'max 20 character',
 
     ];
-    public function mount(Produk $produk)
+    public function mount($id)
     {
         // echo "<pre>";
         // print_r($produk->first()->id);
-        $produk = $produk->first();
+        $produk = Produk::where('id', $id)->first();
         if ($produk) {
             $this->produkId = $produk['id'];
             $this->nama_produk = $produk['nama_produk'];

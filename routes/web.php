@@ -48,4 +48,8 @@ Route::get('/sliderUpdate/{id}', SliderUpdate::class);
 //Kategori
 Route::get('/kategori', KategoriIndex::class);
 Route::get('/kategoriCreate', KategoriCreate::class);
+<<<<<<< Updated upstream
 Route::get('/kategoriUpdate/{id}', KategoriUpdate::class);
+=======
+Route::get('/kategoriUpdate/{id_kategori}', KategoriUpdate::class);
+>>>>>>> Stashed changes

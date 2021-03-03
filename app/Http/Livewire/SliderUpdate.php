@@ -21,11 +21,11 @@ class SliderUpdate extends Component
         ->extends('layout.template');
     }
 
-    public function mount(Slider $slider)
+    public function mount($id)
     {
         // echo "<pre>";
         // print_r($produk->first()->id);
-        $slider = $slider->first();
+        $slider = Slider::where('id', $id)->first();
         if ($slider) {
             $this->sliderId = $slider['id'];
             $this->judul = $slider['judul'];

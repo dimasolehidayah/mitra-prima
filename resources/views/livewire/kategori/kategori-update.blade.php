@@ -1,19 +1,9 @@
-@section('title','Update Produk')
-@section('header','Update Produk')
+@section('title','Update Kategori')
+@section('header','Update Kategori')
 
 <div class="container">
     <form wire:submit.prevent="update">
-        <input type="hidden" name="" wire:model="kategoriId">
-        <div class="form-group">
-            <label>ID Kategori</label>
-            <input type="text" wire:model="id_kategori" class="form-control
-            @error('id_kategori') is-invalid @enderror">
-            @error('id_kategori')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
+        <input type="hidden" name="kategoriId" wire:model="kategoriId">
         <div class="form-group">
             <label>Nama</label>
             <input type="text" wire:model="nama" class="form-control

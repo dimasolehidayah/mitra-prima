@@ -7,16 +7,6 @@
     <form wire:submit.prevent="store">
         <br>
         <div class="form-group">
-            <label>ID Kategori</label>
-            <input type="text" wire:model="id_kategori" class="form-control
-            @error('id_kategori') is-invalid @enderror">
-            @error('id_kategori')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <div class="form-group">
             <label>Nama</label>
             <input type="text" wire:model="nama" class="form-control
             @error('nama') is-invalid @enderror">
