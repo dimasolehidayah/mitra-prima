@@ -74,7 +74,7 @@ class User extends Component
 
     public function UpdateData()
     {
-        $validasi = $this->validate();
+        $this->validate();
         $data = [
             'name' => $this->name,
             'email' => $this->email,

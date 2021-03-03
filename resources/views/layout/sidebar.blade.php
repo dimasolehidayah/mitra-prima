@@ -1,11 +1,11 @@
 <div class="sidenav-menu">
     <div class="nav accordion" id="accordionSidenav">
-        <div class="sidenav-menu-heading">Core</div>
+        <div class="sidenav-menu-heading">Utama</div>
         <a class="nav-link" href="/home">
             <div class="nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             Dashboard
         </a>
-        <div class="sidenav-menu-heading">Addons</div>
+        <div class="sidenav-menu-heading">Fitur</div>
         <a class="nav-link" href="/produk">
             <div class="nav-link-icon"><i class="fas fa-address-book"></i></div>
             Produk
@@ -20,6 +20,11 @@
         <a class="nav-link" href="/kategori">
             <div class="nav-link-icon"><i class="fas fa-align-justify"></i></div>
             Kategori
+        </a>
+        <div class="sidenav-menu-heading">Keperluan</div>
+        <a class="nav-link" href="/setting">
+            <div class="nav-link-icon"><i class="fas fa-cogs"></i></div>
+            Pengaturan
         </a>
     </div>
 </div>

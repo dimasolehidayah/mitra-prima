@@ -14,6 +14,7 @@ use App\Http\Livewire\KategoriCreate;
 use App\Http\Livewire\KategoriUpdate;
 
 use App\Http\Controllers\ProductController;
+use App\Http\Livewire\Setting;
 use App\Http\Livewire\User;
 
 /*
@@ -50,4 +51,8 @@ Route::get('/kategori', KategoriIndex::class);
 Route::get('/kategoriCreate', KategoriCreate::class);
 Route::get('/kategoriUpdate/{id_kategori}', KategoriUpdate::class);
 
+// Setting
+Route::get('/setting', Setting::class);
+
+// User
 Route::get('/user', User::class);
