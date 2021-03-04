@@ -16,8 +16,8 @@
     @endif
 </div>
 <div class="card-body">
-{{-- <div class="row mt-3"> --}}
-    <div class="row mt-3 mb-3">
+<div class="row mt-3 mb-3">
+    <div class="col">
             <select wire:model="paginate" name="" id="" class="form-control form-control-sm w-auto">
                 <option value="2">2</option>
                 <option value="5">5</option>
@@ -25,9 +25,10 @@
             </select>
         </div>
         <div class="col">
-            <input wire:model="search" name="" id="" class="form-control" placeholder="Search">
+            <input wire:model="search" name="" id="" class="form-control " placeholder="Search">
         </div>
     </div>
+
 
     <table class="table table-bordered table-striped">
         <thead class="table-info">
@@ -66,5 +67,5 @@
         </tbody>
     </table>
     {{ $produk->links() }}
-    {{-- </div> --}}
+</div>
 </div>
