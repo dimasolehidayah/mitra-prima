@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class KategoriCreate extends Component
 {
-    public $nama;
+    public $nama_produk;
     public $deskripsi;
 
     public function render()
@@ -22,12 +22,12 @@ class KategoriCreate extends Component
     }
 
     protected $rules = [
-        'nama' => 'required',
+        'nama_produk' => 'required',
         'deskripsi' => 'required',
 
     ];
     protected $messages = [
-        'nama.required' => 'nama required',
+        'nama_produk.required' => 'nama required',
         'deskripsi.required' => 'deskripsi required',
     ];
 
@@ -37,7 +37,7 @@ class KategoriCreate extends Component
          $this->validate();
 
         Kategori::create([
-            'nama' => $this->nama,
+            'nama_produk' => $this->nama_produk,
             'deskripsi' => $this->deskripsi,
             'created_by' => Auth::user()->id,
             'update_by' => Auth::user()->id,

@@ -10,44 +10,26 @@ class ProdukUpdate extends Component
 {
     use WithFileUploads;
 
-    public $nama_produk;
-    public $deskripsi;
+
     public $produkId;
     public $foto;
     public $fotolama;
     public $id_kategori;
     public $no_hp;
 
-    protected $listeners =  [
-        'showProduk'
-    ];
+
     public function render()
     {
         return view('livewire.produk.produk-update')
             ->extends('layout.template');
     }
 
-    public function showProduk($produk)
-    {
-        $this->produkId = $produk['id'];
-        $this->nama_produk = $produk['nama_produk'];
-        $this->deskripsi = $produk['deskripsi'];
-        $this->fotolama = $produk['foto'];
-        $this->id_kategori = $produk['id_kategori'];
-        $this->no_hp = $produk['no_hp'];
-    }
-
 
     protected $rules = [
-
-        'nama_produk' => 'required|min:2',
-        'deskripsi' => 'required',
         'id_kategori' => 'required',
         'no_hp' => 'required|max:20',
     ];
     protected $messages = [
-        'nama_produk.required' => 'nama required',
-        'nama_produk.min' => 'min 2 character',
         'deskripsi.required' => 'deskripsi required',
         'id_kategori.required' => 'id kategori required',
         'no_hp.required' => 'no_handphone required',
@@ -61,8 +43,6 @@ class ProdukUpdate extends Component
         $produk = Produk::where('id', $id)->first();
         if ($produk) {
             $this->produkId = $produk['id'];
-            $this->nama_produk = $produk['nama_produk'];
-            $this->deskripsi = $produk['deskripsi'];
             $this->fotolama = $produk['foto'];
             $this->id_kategori = $produk['id_kategori'];
             $this->no_hp = $produk['no_hp'];

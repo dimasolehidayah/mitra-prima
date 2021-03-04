@@ -15,8 +15,8 @@ class CreateProduk extends Migration
     {
         Schema::create('produk', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama_produk',100);
-            $table->text('deskripsi');
+            $table->string('nama_produk',100)->nullable();
+            $table->text('deskripsi')->nullable();
             $table->string('foto',100);
             $table->integer('id_kategori');
             $table->string('no_hp',20);

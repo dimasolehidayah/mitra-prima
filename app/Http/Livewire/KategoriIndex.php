@@ -23,7 +23,7 @@ class KategoriIndex extends Component
         return view('livewire.kategori.kategori-index', [
             'kategori' => $this->search === null ?
                 Kategori::latest()->paginate($this->paginate) :
-                Kategori::latest()->where('nama', 'like', '%' . $this->search . '%')->paginate($this->paginate)
+                Kategori::latest()->where('nama_produk', 'like', '%' . $this->search . '%')->paginate($this->paginate)
         ])->extends('layout.template');
     }
     public function destroy($id_kategori)

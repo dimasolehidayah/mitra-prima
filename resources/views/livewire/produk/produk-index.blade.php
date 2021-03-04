@@ -34,7 +34,6 @@
                 <th scope="col">Nama Produk</th>
                 <th scope="col">Deskripsi</th>
                 <th scope="col">Foto</th>
-                <th scope="col">ID Kategori</th>
                 <th scope="col">No Handphone</th>
                 <th scope="col">Created By</th>
                 <th scope="col">Update By</th>
@@ -50,7 +49,6 @@
                 <td>
                     <img src="{{ url('storage/photos/'.$data->foto)}}" width="100">
                 </td>
-                <td>{{ $data->id_kategori }}</td>
                 <td>+62{{ $data->no_hp }}</td>
                 <td>{{ $data->created_by }}</td>
                 <td>{{ $data->update_by }}</td>

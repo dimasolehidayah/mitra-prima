@@ -9,7 +9,7 @@ class KategoriUpdate extends Component
 {
 
     public $kategoriId;
-    public $nama;
+    public $nama_produk;
     public $deskripsi;
 
 
@@ -20,12 +20,12 @@ class KategoriUpdate extends Component
     }
 
     protected $rules = [
-        'nama' => 'required',
+        'nama_produk' => 'required',
         'deskripsi' => 'required',
 
     ];
     protected $messages = [
-        'nama.required' => 'nama required',
+        'nama_produk.required' => 'nama required',
         'deskripsi.required' => 'deskripsi required',
     ];
     public function updated($propertyName)
@@ -40,7 +40,7 @@ class KategoriUpdate extends Component
         $kategori = Kategori::where('id_kategori', $id_kategori)->first();
         if ($kategori) {
             $this->kategoriId = $kategori['id_kategori'];
-            $this->nama = $kategori['nama'];
+            $this->nama_produk = $kategori['nama_produk'];
             $this->deskripsi = $kategori['deskripsi'];
         }
     }

@@ -7,27 +7,6 @@
     <form wire:submit.prevent="update">
         <input type="hidden" name="" wire:model="produkId">
         <div class="form-group">
-            <label>Nama Produk</label>
-            <input type="text" wire:model="nama_produk" class="form-control
-            @error('nama_produk') is-invalid @enderror">
-            @error('nama_produk')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-
-        <div class="form-group">
-            <label>Deskripsi</label>
-            <input type="text" wire:model="deskripsi" class="form-control
-            @error('deskripsi') is-invalid @enderror">
-            @error('deskripsi')
-            <span class="invalid-feedback">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
-        </div>
-        <div class="form-group">
             <label>Foto</label>
             <input type="file" wire:model="foto" class="form-control
             @error('foto') is-invalid @enderror">

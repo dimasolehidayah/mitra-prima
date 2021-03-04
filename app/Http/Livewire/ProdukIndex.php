@@ -20,7 +20,7 @@ class ProdukIndex extends Component
     {
         return view('livewire.produk.produk-index', [
             'produk' => $this->search === null ?
-            Produk::latest()->paginate($this->paginate) :
+            Produk::latest('Produk.created_at')->leftJoin('Kategori', 'Kategori.id_kategori', '=', 'Produk.id_kategori')->paginate($this->paginate) :
             Produk::latest()->where('nama_produk', 'like', '%' . $this->search .'%')->paginate($this->paginate)
         ])->extends('layout.template');
     }
@@ -33,7 +33,7 @@ class ProdukIndex extends Component
             }
             $data->delete();
 
-            session()->flash('message', 'Contact was delete!');
+            session()->flash('message', 'Produk was delete!');
         }
     }
     public function getProduk($id)

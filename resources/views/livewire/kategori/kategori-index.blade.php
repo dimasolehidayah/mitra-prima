@@ -41,7 +41,7 @@
             @foreach ($kategori as $k)
             <tr>
                 <td scope="row">{{ $loop->iteration }}</td>
-                <td>{{ $k->nama }}</td>
+                <td>{{ $k->nama_produk }}</td>
                 <td>{{ $k->deskripsi }}</td>
                 <td>{{ $k->created_by }}</td>
                 <td>{{ $k->update_by }}</td>

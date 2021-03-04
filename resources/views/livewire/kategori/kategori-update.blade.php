@@ -6,9 +6,9 @@
         <input type="hidden" name="kategoriId" wire:model="kategoriId">
         <div class="form-group">
             <label>Nama</label>
-            <input type="text" wire:model="nama" class="form-control
-            @error('nama') is-invalid @enderror">
-            @error('nama')
+            <input type="text" wire:model="nama_produk" class="form-control
+            @error('nama_produk') is-invalid @enderror">
+            @error('nama_produk')
                 <span class="invalid-feedback">
                     <strong>{{ $message }}</strong>
                 </span>

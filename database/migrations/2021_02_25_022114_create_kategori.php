@@ -15,7 +15,7 @@ class CreateKategori extends Migration
     {
         Schema::create('kategori', function (Blueprint $table) {
             $table->increments('id_kategori');
-            $table->string('nama',100);
+            $table->string('nama_produk',100);
             $table->text('deskripsi');
             $table->unsignedBigInteger('created_by');
             $table->foreign('created_by')->references('id')->on('users');
