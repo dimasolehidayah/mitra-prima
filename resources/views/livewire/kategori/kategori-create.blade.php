@@ -1,8 +1,6 @@
 @section('title','Tambah Kategori')
 @section('header','Tambah Kategori')
 
-
-
 <div class="container">
     <form wire:submit.prevent="store">
         <br>

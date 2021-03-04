@@ -1,6 +1,7 @@
 @section('title','Kategori')
 @section('header','Kategori')
 <div>
+    <form wire:submit.prevent="store">
     <div class="card-header">
     <a href="/kategoriCreate" class="btn btn-primary btn-sm">Tambah Data</a>
     </div>
@@ -47,7 +48,6 @@
                 <td>{{ $k->update_by }}</td>
                 <td>
                     <a href="/kategoriUpdate/{{$k->id_kategori}}" class="btn btn-primary btn-sm">Edit</a>
-                    {{-- <button wire:click="getProduk({{$k->id}})" class="btn btn-sm btn-info text-white">Edit</button> --}}
                     <button wire:click="destroy({{$k->id_kategori}})" class="btn btn-sm btn-danger text-white">Delete</button>
                 <td>
             </tr>

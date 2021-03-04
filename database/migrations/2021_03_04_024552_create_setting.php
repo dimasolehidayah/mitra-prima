@@ -21,6 +21,10 @@ class CreateSetting extends Migration
             $table->string('no_hp', 20);
             $table->string('email');
             $table->text('alamat');
+            $table->unsignedBigInteger('created_by');
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->unsignedBigInteger('update_by');
+            $table->foreign('update_by')->references('id')->on('users');
             $table->timestamps();
         });
     }
