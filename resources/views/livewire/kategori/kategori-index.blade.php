@@ -1,8 +1,7 @@
 @section('title','Kategori')
 @section('header','Kategori')
-<div class="container">
-    <hr>
-    <div>
+<div>
+    <div class="card-header">
     <a href="/kategoriCreate" class="btn btn-primary btn-sm">Tambah Data</a>
     </div>
     @if (session()->has('message'))
@@ -13,7 +12,7 @@
                 </button>
         </div>
     @endif
-
+        <div class="card-body">
     <div class="row mt-3 mb-3">
         <div class="col">
             <select wire:model="paginate" name="" id="" class="form-control form-control-sm w-auto">
@@ -56,5 +55,6 @@
         </tbody>
     </table>
     {{ $kategori->links() }}
+</div>
 </div>
 

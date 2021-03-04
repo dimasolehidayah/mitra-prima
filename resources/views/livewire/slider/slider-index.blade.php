@@ -1,7 +1,7 @@
 @section('title','Slider')
 @section('header','Slider')
-<div class="container">
-    <div>
+<div>
+    <div class="card-header">
         <a href="/sliderCreate" class="btn btn-primary btn-sm">Tambah Data</a>
     </div>
         @if (session()->has('message'))
@@ -12,6 +12,7 @@
                     </button>
             </div>
         @endif
+    <div class="card-body">
     <table class="table table-bordered table-striped">
         <thead class="table-info">
             <tr>
@@ -39,4 +40,5 @@
             @endforeach
         </tbody>
     </table>
+</div>
 </div>
