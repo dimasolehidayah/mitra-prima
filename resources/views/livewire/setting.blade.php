@@ -4,6 +4,14 @@
     <!-- Account details card-->
         <div class="card-header">Pengaturan Website</div>
         <div class="card-body">
+        @if (session()->has('message'))
+            <div class="alert alert-success" role="alert">
+                {{ session('message')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+        @endif
             <form wire:submit.prevent="store">
                 <!-- Form Group (name)-->
                 <div class="form-group">
