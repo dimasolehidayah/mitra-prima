@@ -1,7 +1,45 @@
 @section('title','Pengaturan')
 @section('header','Pengaturan')
-<div>
+@section('kotak')
+
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <div class="card">
+                <div class="card-header">Pengaturan Logo</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                    <img class="img-account-profile mb-4"
+                        src="{{ url('/'.'storage/photos/'.$data->logo) }}" alt />
+                    <!-- Profile picture help block-->
+                    {{-- <div class="small font-italic text-muted mb-4">Klik untuk mengganti</div> --}}
+                    <!-- Profile picture upload button-->
+                    <label class="btn btn-primary" >Upload new image
+                    <input type="file" hidden wire:model="logo" class="form-control
+                @error('logo') is-invalid @enderror"></label>
+                @error('logo')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                </div>
+            </div>
+        </div>
+
+        {{-- <div class="form-group col-md-6">
+            <label class="small mb-1">Logo</label>
+                <input type="file" wire:model="logo" class="form-control
+                @error('logo') is-invalid @enderror">
+                @error('logo')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+        </div> --}}
+
+        <div class="col-xl-8">
     <!-- Account details card-->
+    <div class="card mb-4">
         <div class="card-header">Pengaturan Website</div>
         <div class="card-body">
         @if (session()->has('message'))
@@ -24,11 +62,10 @@
                 </span>
                 @enderror
                 </div>
-                <!-- Form Row-->
-                <div class="form-row">
                     <!-- Form Group (no hp)-->
-                    <div class="form-group col-md-6">
+                    <div class="form-group">
                         <label class="small mb-1">No Hp</label>
+                        `
                             <input type="text" wire:model="no_hp" class="form-control
                             @error('no_hp') is-invalid @enderror">
                             @error('no_hp')
@@ -37,22 +74,10 @@
                                 </span>
                             @enderror
                     </div>
-                    <!-- Form Group (logo)-->
-                    <div class="form-group col-md-6">
-                        <label class="small mb-1">Logo</label>
-                            <input type="file" wire:model="logo" class="form-control
-                            @error('logo') is-invalid @enderror">
-                            @error('logo')
-                                <span class="invalid-feedback">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                    </div>
-                </div>
                 <!-- Form Group (email address)-->
                 <div class="form-group">
                     <label class="small mb-1">Email</label>
-                        <input type="text" wire:model="email" class="form-control
+                        <input type="email" wire:model="email" class="form-control
                         @error('email') is-invalid @enderror">
                         @error('email')
                             <span class="invalid-feedback">
@@ -82,5 +107,8 @@
                 <button class="btn btn-primary" type="submit">Save changes</button>
             </form>
         </div>
+        </div>
+    </div>
 </div>
+{{-- @endsection --}}
 

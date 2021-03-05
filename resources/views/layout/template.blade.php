@@ -83,6 +83,7 @@
                 </header>
                 <!-- Main page content-->
                 <div class="container mt-n10">
+                    @yield('kotak')
                     <div class="card mb-4">
                 @yield('content')
                     </div>

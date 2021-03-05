@@ -96,9 +96,7 @@ class Setting extends Component
         $data = $this->validate();
         $data['logo'] = $this->logolama;
         if ($this->logo) {
-            // $data['logo'] = md5($this->logo . microtime()) . '.' . $this->logo->extension();
-            // $this->logo->storeAs('photos', $data['logo']);
-
+            unlink(public_path('storage/photos/') . '/' . $data['logo']);
             $data['logo'] = md5($this->logo . microtime()) . '.' . $this->logo->extension();
             $this->logo->storeAs('photos', $data['logo']);
         }
@@ -109,13 +107,16 @@ class Setting extends Component
     public function render()
     {
         $count = ModelSetting::latest()->count();
+        $data = ModelSetting::latest()->first();
         // print_r($count);
         if ($count > 0) {
             // $this->update();
         } else {
             $rules['logo'] = 'image|mimes:png,jpg,bmp,jpeg';
         }
-        return view('livewire.setting')
+        return view('livewire.setting', [
+            'data' => $data
+            ])
             ->extends('layout.template');
     }
 }

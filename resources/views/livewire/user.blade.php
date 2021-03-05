@@ -1,10 +1,10 @@
 @section('title','Pengguna')
 @section('header','Pengguna')
 <div>
-        <div class="card-header">Data Pengguna
+        <div class="card-header">
 
             <button type="button" class="btn btn-primary" wire:click.prevent="ClearForm" data-toggle="modal" data-target="#adduser">
-                Add User
+                Tambah Pengguna
             </button>
 
             {{-- <input wire:model="search" type="text" placeholder="Search..." class="form-control"> --}}
