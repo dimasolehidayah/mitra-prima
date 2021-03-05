@@ -1,7 +1,7 @@
 @section('title','Kategori')
 @section('header','Kategori')
+
 <div>
-    <form wire:submit.prevent="store">
     <div class="card-header">
     <a href="/kategoriCreate" class="btn btn-primary btn-sm">Tambah Data</a>
     </div>
@@ -13,7 +13,7 @@
                 </button>
         </div>
     @endif
-        <div class="card-body">
+    <div class="card-body">
     <div class="row mt-3 mb-3">
         <div class="col">
             <select wire:model="paginate" name="" id="" class="form-control form-control-sm w-auto">
@@ -31,6 +31,7 @@
         <thead class="table-info">
             <tr>
                 <th scope="col">No</th>
+                <th scope="col">ID Kategori</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Deskripsi</th>
                 <th scope="col">Created By</th>
@@ -42,6 +43,7 @@
             @foreach ($kategori as $k)
             <tr>
                 <td scope="row">{{ $loop->iteration }}</td>
+                <td>{{ $k->id_kategori}}</td>
                 <td>{{ $k->nama_produk }}</td>
                 <td>{{ $k->deskripsi }}</td>
                 <td>{{ $k->created_by }}</td>

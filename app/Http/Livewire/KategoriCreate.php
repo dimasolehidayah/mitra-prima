@@ -34,7 +34,7 @@ class KategoriCreate extends Component
     public function store()
     {
 
-         $this->validate();
+        $this->validate();
 
         Kategori::create([
             'nama_produk' => $this->nama_produk,

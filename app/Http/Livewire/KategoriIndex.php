@@ -29,9 +29,10 @@ class KategoriIndex extends Component
     public function destroy($id_kategori)
     {
         if ($id_kategori) {
-            Kategori::where('id_kategori', $id_kategori)->delete();
+        Kategori::where('id_kategori', $id_kategori)->delete();
 
             session()->flash('message', 'Kategori was delete!');
         }
     }
+
 }
