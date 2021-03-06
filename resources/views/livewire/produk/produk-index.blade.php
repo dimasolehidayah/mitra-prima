@@ -35,8 +35,8 @@
                 <th scope="col">Deskripsi</th>
                 <th scope="col">Foto</th>
                 <th scope="col">No Handphone</th>
-                <th scope="col">Created By</th>
-                <th scope="col">Update By</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Stok</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -50,8 +50,8 @@
                     <img src="{{ url('storage/photos/'.$data->foto)}}" width="100">
                 </td>
                 <td>+62{{ $data->no_hp }}</td>
-                <td>{{ $data->created_by }}</td>
-                <td>{{ $data->update_by }}</td>
+                <td>Rp.{{ $data->harga }}</td>
+                <td>{{ $data->stok }}</td>
                 <td>
                     <a href="/produkUpdate/{{$data->id}}" class="btn btn-primary btn-sm">Edit</a>
                     {{-- <button wire:click="getProduk({{$data->id}})" class="btn btn-sm btn-info text-white">Edit</button> --}}

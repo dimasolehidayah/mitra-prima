@@ -14,6 +14,8 @@ class ProdukCreate extends Component
     public $foto;
     public $id_kategori;
     public $no_hp;
+    public $harga;
+    public $stok;
 
     public function render()
     {
@@ -28,9 +30,13 @@ class ProdukCreate extends Component
     protected $rules = [
         'foto' => 'image|mimes:png,jpg,bmp,jpeg',
         'id_kategori' => 'required',
+        'stok' => 'required',
+        'harga' => 'required',
         'no_hp' => 'required|max:20',
     ];
     protected $messages = [
+        'stok' => 'stok required',
+        'harga' => 'harga required',
         'foto.image' => 'foto required',
         'foto.mimes' => 'foto extension jpg,png,jpeg,bmp',
         'id_kategori.required' => 'id kategori required',
@@ -49,6 +55,8 @@ class ProdukCreate extends Component
         Produk::create([
             'foto' => $data['foto'],
             'id_kategori' => $this->id_kategori,
+            'harga' => $this->harga,
+            'stok' => $this->stok,
             'no_hp' => $this->no_hp,
             'created_by' => Auth::user()->id,
             'update_by' => Auth::user()->id,

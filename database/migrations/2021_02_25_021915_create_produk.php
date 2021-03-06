@@ -20,6 +20,8 @@ class CreateProduk extends Migration
             $table->string('foto',100);
             $table->integer('id_kategori');
             $table->string('no_hp',20);
+            $table->integer('harga');
+            $table->integer('stok');
             $table->unsignedBigInteger('created_by');
             $table->foreign('created_by')->references('id')->on('users');
             $table->unsignedBigInteger('update_by');

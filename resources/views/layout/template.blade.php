@@ -115,6 +115,7 @@
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" crossorigin="anonymous"></script>
     <script src="{{'template/assets/demo/date-range-picker-demo.js'}}"></script>
     {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
     @livewireScripts
     {{-- <script src="{{'template/js/sb-customizer.js'}}"></script>
     <sb-customizer project="sb-admin-pro"></sb-customizer> --}}

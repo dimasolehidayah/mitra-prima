@@ -10,7 +10,9 @@
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
                     <img class="img-account-profile mb-4"
-                        src="{{ url('/'.'storage/photos/'.$data->logo) }}" alt />
+                        src="{{ url('/'.'storage/photos/'.$data->logo) }}"
+                        width="250px"
+                        />
                     <!-- Profile picture help block-->
                     {{-- <div class="small font-italic text-muted mb-4">Klik untuk mengganti</div> --}}
                     <!-- Profile picture upload button-->

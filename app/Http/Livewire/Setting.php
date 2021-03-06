@@ -62,7 +62,6 @@ class Setting extends Component
         $count = ModelSetting::latest()->count();
         // print_r($count);
         if ($count > 0) {
-
             $this->update();
         } else {
             // $data = $this->validate();
@@ -106,14 +105,14 @@ class Setting extends Component
     }
     public function render()
     {
-        $count = ModelSetting::latest()->count();
+        // $count = ModelSetting::latest()->count();
         $data = ModelSetting::latest()->first();
-        // print_r($count);
-        if ($count > 0) {
-            // $this->update();
-        } else {
-            $rules['logo'] = 'image|mimes:png,jpg,bmp,jpeg';
-        }
+        // // print_r($count);
+        // if ($count > 0) {
+        //     // $this->update();
+        // } else {
+        //     $rules['logo'] = 'image|mimes:png,jpg,bmp,jpeg';
+        // }
         return view('livewire.setting', [
             'data' => $data
             ])
