@@ -33,7 +33,7 @@ class ProdukIndex extends Component
             }
             $data->delete();
 
-            session()->flash('message', 'Produk was delete!');
+            session()->flash('pesan', 'Produk was delete!');
         }
     }
     public function getProduk($id)

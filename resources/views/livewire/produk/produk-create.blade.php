@@ -19,8 +19,15 @@
         </div>
         <div class="form-group">
             <label>ID Kategori</label>
-            <input type="text" wire:model="id_kategori" class="form-control
+
+            <select wire:model="id_kategori" class="form-control
             @error('id_kategori') is-invalid @enderror">
+            <option></option>
+            @foreach ($produk as $data)
+            <option value="{{$data->id_kategori}}">{{$data->id_kategori}}-{{$data->nama_produk}}</option>
+            @endforeach
+        </select>
+
             @error('id_kategori')
                 <span class="invalid-feedback">
                     <strong>{{ $message }}</strong>
