@@ -34,8 +34,6 @@
                 <th scope="col">ID Kategori</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Deskripsi</th>
-                <th scope="col">Created By</th>
-                <th scope="col">Update By</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -46,8 +44,6 @@
                 <td>{{ $k->id_kategori}}</td>
                 <td>{{ $k->nama_produk }}</td>
                 <td>{{ $k->deskripsi }}</td>
-                <td>{{ $k->created_by }}</td>
-                <td>{{ $k->update_by }}</td>
                 <td>
                     <a href="/kategoriUpdate/{{$k->id_kategori}}" class="btn btn-primary btn-sm">Edit</a>
                     <button wire:click="destroy({{$k->id_kategori}})" class="btn btn-sm btn-danger text-white">Delete</button>

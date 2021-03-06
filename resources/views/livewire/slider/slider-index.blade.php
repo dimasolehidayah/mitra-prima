@@ -19,7 +19,6 @@
                 <th scope="col">No</th>
                 <th scope="col">Nama Produk</th>
                 <th scope="col">Foto</th>
-                <th scope="col">Update By</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
