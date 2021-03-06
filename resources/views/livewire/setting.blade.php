@@ -14,7 +14,7 @@
                     <!-- Profile picture help block-->
                     {{-- <div class="small font-italic text-muted mb-4">Klik untuk mengganti</div> --}}
                     <!-- Profile picture upload button-->
-                    <label class="btn btn-primary" >Upload new image
+                    <label class="btn btn-primary" >Ganti Logo
                     <input type="file" hidden wire:model="logo" class="form-control
                 @error('logo') is-invalid @enderror"></label>
                 @error('logo')
@@ -25,17 +25,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- <div class="form-group col-md-6">
-            <label class="small mb-1">Logo</label>
-                <input type="file" wire:model="logo" class="form-control
-                @error('logo') is-invalid @enderror">
-                @error('logo')
-                    <span class="invalid-feedback">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-        </div> --}}
 
         <div class="col-xl-8">
     <!-- Account details card-->
@@ -104,7 +93,7 @@
                 @enderror
                 </div>
                 <!-- Save changes button-->
-                <button class="btn btn-primary" type="submit">Save changes</button>
+                <button class="btn btn-primary" type="submit">Simpan</button>
             </form>
         </div>
         </div>

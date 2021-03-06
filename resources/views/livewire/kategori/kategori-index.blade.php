@@ -51,7 +51,7 @@
                 <td>
                     <a href="/kategoriUpdate/{{$k->id_kategori}}" class="btn btn-primary btn-sm">Edit</a>
                     <button wire:click="destroy({{$k->id_kategori}})" class="btn btn-sm btn-danger text-white">Delete</button>
-                <td>
+                </td>
             </tr>
             @endforeach
         </tbody>
