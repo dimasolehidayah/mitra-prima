@@ -22,7 +22,7 @@ class SliderIndex extends Component
             }
             $data->delete();
 
-            session()->flash('message', 'Slider was delete!');
+            session()->flash('pesan', 'Slider was delete!');
         }
     }
 }

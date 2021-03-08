@@ -31,7 +31,7 @@ class KategoriIndex extends Component
         if ($id_kategori) {
         Kategori::where('id_kategori', $id_kategori)->delete();
 
-            session()->flash('message', 'Kategori was delete!');
+            session()->flash('pesan', 'Kategori was delete!');
         }
     }
 
