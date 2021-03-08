@@ -18,6 +18,7 @@ class User extends Component
     public $email;
     public $password;
     public $search;
+    public $jumlah_user;
 
     protected $rules = [
         'name' => 'required|min:4',
@@ -96,7 +97,6 @@ class User extends Component
 
         redirect('user');
     }
-
     public function render()
     {
         $users = TabelUser::where('name', 'like', '%' . $this->search . '%')

@@ -13,9 +13,9 @@ use App\Http\Livewire\KategoriIndex;
 use App\Http\Livewire\KategoriCreate;
 use App\Http\Livewire\KategoriUpdate;
 
-use App\Http\Controllers\ProductController;
 use App\Http\Livewire\Setting;
 use App\Http\Livewire\User;
+use App\Http\Livewire\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +34,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', Dashboard::class)->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Produk
 Route::get('/produk', ProdukIndex::class);

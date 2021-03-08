@@ -1,8 +1,8 @@
 <div class="sidenav-menu">
     <div class="nav accordion" id="accordionSidenav">
         <div class="sidenav-menu-heading">Utama</div>
-        <a class="nav-link" href="/home">
-            <div class="nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <a class="nav-link" href="/dashboard">
+            <div class="nav-link-icon"><i class="fas fa-chart-line"></i></div>
             Dashboard
         </a>
         <div class="sidenav-menu-heading">Fitur</div>
