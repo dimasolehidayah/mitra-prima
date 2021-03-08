@@ -26,7 +26,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="mr-3">
                             <div class="text-white-75 small">Jumlah Produk</div>
-                            <div class="text-lg font-weight-bold">$40,000</div>
+                            <div class="text-lg font-weight-bold">{{$produk}}</div>
                         </div>
                         <i class="feather-xl text-white-50" data-feather="folder"></i>
                     </div>
@@ -43,7 +43,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="mr-3">
                             <div class="text-white-75 small">Jumlah Kategori</div>
-                            <div class="text-lg font-weight-bold">$215,000</div>
+                            <div class="text-lg font-weight-bold">{{$kategori}}</div>
                         </div>
                         <i class="feather-xl text-white-50" data-feather="align-justify"></i>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="mr-3">
                             <div class="text-white-75 small">Jumlah Slider</div>
-                            <div class="text-lg font-weight-bold">24</div>
+                            <div class="text-lg font-weight-bold">{{$slider}}</div>
                         </div>
                         <i class="feather-xl text-white-50" data-feather="image"></i>
                     </div>
@@ -77,7 +77,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="mr-3">
                             <div class="text-white-75 small">Jumlah Pengguna</div>
-                            <div class="text-lg font-weight-bold">17</div>
+                            <div class="text-lg font-weight-bold">{{$user}}</div>
                         </div>
                         <i class="feather-xl text-white-50" data-feather="user"></i>
                     </div>
