@@ -201,7 +201,7 @@
         <!-- ======= Services Section ======= -->
         <section id="contact" class="services section-bg">
             <div class="container" data-aos="fade-up">
-
+                @foreach ($setting as $data)
                 <div class="section-title text-center">
                     <p>Informasi</p>
                 </div>
@@ -219,24 +219,22 @@
 
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box">
-                            <div class="icon"><i class='bx bx-envelope'></i></div>
+                            <div class="icon"><i class='bx bx-map'></i></div>
                             <h4 class="title"><a href="">Lokasi</a></h4>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                                quaerat quam optio, obcaecati est alias.</p>
+                            <p class="description">{{ $data->alamat }}</p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
                         <div class="icon-box">
-                            <div class="icon"><i class='bx bx-map'></i></div>
+                            <div class="icon"><i class='bx bx-envelope'></i></div>
                             <h4 class="title"><a href="">Kontak</a></h4>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
-                                quam recusandae quod, vitae consequatur animi.</p>
+                            <p class="description">Email : {{ $data->email }}<br>No Hp : {{ $data->no_hp }}</p>
                         </div>
                     </div>
 
                 </div>
-
+                @endforeach
             </div>
         </section><!-- End Services Section -->
 
