@@ -207,7 +207,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class='bx bx-time-five'></i></div>
                             <h4 class="title"><a href="">Jam Buka</a></h4>
@@ -217,7 +217,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class='bx bx-map'></i></div>
                             <h4 class="title"><a href="">Lokasi</a></h4>
@@ -225,7 +225,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class='bx bx-envelope'></i></div>
                             <h4 class="title"><a href="">Kontak</a></h4>
