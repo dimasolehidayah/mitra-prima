@@ -175,7 +175,7 @@
 
                 <div class="row gy-4">
                     @foreach ($produk as $data)
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="member">
                             <h4 class="mt-3 mb-3">{{ $data->nama_produk }}</h4>
                             <div class="member-img">
