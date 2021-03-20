@@ -16,7 +16,7 @@ use App\Http\Livewire\KategoriUpdate;
 use App\Http\Livewire\Setting;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Dashboard;
-
+use App\Http\Livewire\Index;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +31,8 @@ use App\Http\Livewire\Dashboard;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index', Index::class);
 
 Auth::routes();
 

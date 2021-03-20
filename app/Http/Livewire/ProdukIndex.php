@@ -11,7 +11,7 @@ class ProdukIndex extends Component
 {
     use WithPagination;
 
-    public $paginate = 2;
+    public $paginate = 5;
     public $search;
 
     protected $paginationTheme = 'bootstrap';
