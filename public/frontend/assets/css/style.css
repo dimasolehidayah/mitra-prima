@@ -20,6 +20,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+/* header */
+.carousel-caption{
+    position:absolute;
+    background: #ff2929;
+    left: -50;
+    text-align: left;
+    bottom: 0;
+    height:574px!important;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 50% 100%);
+    clip-path: polygon(0 0, 0% 100%, 50% 100%);
+}
+.text{
+    position: absolute;
+    left: 2%;
+    width: 35%;
+    bottom: 0;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
