@@ -211,9 +211,7 @@
                         <div class="icon-box">
                             <div class="icon"><i class='bx bx-time-five'></i></div>
                             <h4 class="title"><a href="">Jam Buka</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                excepturi sint
-                                occaecati cupiditate</p>
+                            <p class="description">{{ $data->jam }}</p>
                         </div>
                     </div>
 
@@ -273,7 +271,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Social Networks</h4>
+                        <h4>Social Media Kami</h4>
                         <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -287,6 +285,11 @@
                 </div>
             </div>
         </div>
+
+        {{-- <div style="position:fixed;left:20px;bottom:20px;">
+            <a href="https://api.whatsapp.com/send?phone=+6285237965968&text=Halo saya tertarik membeli">
+            <img width="50px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
+        </div> --}}
 
     </footer><!-- End Footer -->
 

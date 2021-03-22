@@ -17,6 +17,7 @@ class Setting extends Component
     public $deskripsi;
     public $logo;
     public $email;
+    public $jam;
     public $no_hp;
     public $alamat;
     public $logolama;
@@ -26,6 +27,7 @@ class Setting extends Component
         'deskripsi' => 'required',
         // 'logo' => 'image|mimes:png,jpg,bmp,jpeg',
         'email' => 'required',
+        'jam' => 'required',
         'no_hp' => 'required|max:20',
         'alamat' => 'required',
     ];
@@ -39,6 +41,7 @@ class Setting extends Component
         'no_hp.required' => 'no_handphone required',
         'no_hp.max' => 'max 20 character',
         'alamat' => 'alamat required',
+        'jam' => 'alamat required',
     ];
     public function updated($propertyName)
     {
@@ -53,6 +56,7 @@ class Setting extends Component
             $this->no_hp = $setting->no_hp;
             $this->alamat = $setting->alamat;
             $this->email = $setting->email;
+            $this->jam = $setting->jam;
             $this->logolama = $setting->logo;
         }
     }
@@ -75,6 +79,7 @@ class Setting extends Component
                     'email' => $this->email,
                     'no_hp' => $this->no_hp,
                     'alamat' => $this->alamat,
+                    'jam' => $this->jam,
                     'created_by' => Auth::user()->id,
                     'update_by' => Auth::user()->id,
                 ]);
