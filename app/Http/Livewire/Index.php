@@ -6,7 +6,6 @@ use Livewire\Component;
 use App\Models\Setting;
 use App\Models\Produk;
 use App\Models\Slider;
-use App\Models\Kategori;
 
 class Index extends Component
 {

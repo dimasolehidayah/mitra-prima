@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Produk;
+use App\Models\Kategori;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -22,8 +23,9 @@ class ProdukUpdate extends Component
 
     public function render()
     {
-        return view('livewire.produk.produk-update')
-            ->extends('layout.template');
+        return view('livewire.produk.produk-update',
+        [ 'produk' => Kategori::latest()->get()
+        ])->extends('layout.template');
     }
 
 
