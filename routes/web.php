@@ -17,6 +17,8 @@ use App\Http\Livewire\Setting;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Index;
+use GuzzleHttp\Middleware;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +38,8 @@ Route::get('/index', Index::class);
 
 Auth::routes();
 
+Route::middleware(['auth'])->group(function () {
+    
 Route::get('/dashboard', Dashboard::class)->name('home');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -59,3 +63,5 @@ Route::get('/setting', Setting::class);
 
 // User
 Route::get('/user', User::class);
+
+});
