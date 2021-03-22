@@ -43,11 +43,14 @@ h1, h2, h3, h4, h5, h6 {
         clip-path: none;
         background: none;
         left: 10px;
-        bottom: 250px;
+        /* bottom: inherit; */
+        /* top: inherit; */
+        top: 10%;
         text-align: center;
     }
     .text{
         width: 90%;
+        bottom: unset;
     }
 }
 @media (min-width: 768px) and (max-width: 992px){
