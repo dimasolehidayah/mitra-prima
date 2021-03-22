@@ -174,7 +174,7 @@
                         <div class="member">
                             <h4 class="mt-3 mb-3">{{ $data->nama_produk }}</h4>
                             <div class="member-img">
-                                <img src="{{ url('storage/photos/'.$data->foto)}}" class="img-fluid" alt="">
+                                <img src="{{ url('storage/photos/'.$data->foto)}}" class="img-fluid" alt="" width="400px">
                             </div>
                             <div class="member-info">
                                 <h4>Rp. {{ $data->harga }}</h4>

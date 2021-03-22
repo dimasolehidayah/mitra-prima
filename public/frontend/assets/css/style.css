@@ -37,6 +37,29 @@ h1, h2, h3, h4, h5, h6 {
     width: 35%;
     bottom: 0;
 }
+@media (min-width: 320px) and (max-width: 480px){
+    .carousel-caption{
+        display:none ;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .carousel-caption{
+        position:absolute;
+        background: #ff2929;
+        left: -70;
+        text-align: left;
+        bottom: 0;
+        height:526px!important;
+        -webkit-clip-path: polygon(0 0, 0% 100%, 50% 100%);
+        clip-path: polygon(0 0, 0% 100%, 50% 100%);
+    }
+    .text{
+        position: absolute;
+        left: 5%;
+        width: 30%;
+        bottom: 40px;
+    }
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -658,6 +681,7 @@ section {
 .team .member .member-img {
   position: relative;
   overflow: hidden;
+  padding: 20px;
 }
 
 .team .member .member-img:after {
