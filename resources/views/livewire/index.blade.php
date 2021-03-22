@@ -77,8 +77,8 @@
                     <div class="carousel-container">
                         <div class="container carousel-caption">
                             <div class="text">
-                            <h2 class="animate__animated animate__fadeInDown">{{ $data->judul }}</h2>
-                            <p class="animate__animated animate__fadeInUp">{{ $data->deskripsi }}</p>
+                                <h2 class="animate__animated animate__fadeInDown">{{ $data->judul }}</h2>
+                                <p class="animate__animated animate__fadeInUp">{{ $data->deskripsi }}</p>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,8 @@
 
                 <div class="row gy-4">
                     @foreach ($produk as $data)
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="fade-up"
+                        data-aos-delay="200">
                         <div class="member">
                             <h4 class="mt-3 mb-3">{{ $data->nama_produk }}</h4>
                             <div class="member-img">
@@ -202,7 +203,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in"
+                        data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class='bx bx-time-five'></i></div>
                             <h4 class="title"><a href="">Jam Buka</a></h4>
@@ -210,7 +212,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in"
+                        data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class='bx bx-map'></i></div>
                             <h4 class="title"><a href="">Lokasi</a></h4>
@@ -218,7 +221,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in"
+                        data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class='bx bx-envelope'></i></div>
                             <h4 class="title"><a href="">Kontak</a></h4>
@@ -241,7 +245,7 @@
                 <div class="row">
                     @foreach ($setting as $data)
                     <div class="col-lg-3 col-md-6 footer-contact">
-                      <img src="{{ url('storage/photos/'.$data->logo)}}" width="200px">
+                        <img src="{{ url('storage/photos/'.$data->logo)}}" width="200px">
                     </div>
                     @endforeach
 
@@ -267,7 +271,7 @@
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Social Media Kami</h4>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                        <p>Ikuti sosial media kami untuk mendapatkan setiap informasi terbaru dari kami</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -281,16 +285,16 @@
             </div>
         </div>
 
-        {{-- <div style="position:fixed;left:20px;bottom:20px;">
-            <a href="https://api.whatsapp.com/send?phone=+6285237965968&text=Halo saya tertarik membeli">
-            <img width="50px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
-        </div> --}}
-
     </footer><!-- End Footer -->
 
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i></a>
+
+    <div style="position:fixed;padding:5px;left:95%;top:200px;background-color:green;border-radius: 10%">
+        <h1 style="font-size:10px;color:white;text-align:center">klik untuk whatsapp</h1>
+        <a href="https://api.whatsapp.com/send?phone=+6285237965968&text=Halo saya tertarik membeli">
+            <img width="50px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
+    </div>
 
     <!-- Vendor JS Files -->
     <script src="{{url('frontend/assets/vendor/aos/aos.js')}}"></script>

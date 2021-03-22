@@ -39,7 +39,7 @@
         <thead class="table-info">
             <tr>
                 <th scope="col">No</th>
-                <th scope="col">Nama Produk</th>
+                <th scope="col">Judul</th>
                 <th scope="col">Deskripsi</th>
                 <th scope="col">Foto</th>
                 <th scope="col">No Handphone</th>
