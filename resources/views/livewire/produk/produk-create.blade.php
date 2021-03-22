@@ -22,7 +22,7 @@
 
             <select wire:model="id_kategori" class="form-control
             @error('id_kategori') is-invalid @enderror">
-            <option></option>
+            <option>--Pilih Kategori--</option>
             @foreach ($produk as $data)
             <option value="{{$data->id_kategori}}">{{$data->id_kategori}}-{{$data->nama_produk}}</option>
             @endforeach
@@ -66,7 +66,8 @@
         </div>
 
         <button type="submit" class="btn btn-success">Simpan</button>
-
+        <br>
+        <br>
     </form>
 </div>
 
