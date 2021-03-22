@@ -18,6 +18,17 @@
         </div>
 
         <div class="form-group">
+            <label>Deskripsi</label>
+            <textarea type="text" wire:model="deskripsi" class="form-control
+            @error('deskripsi') is-invalid @enderror"></textarea>
+            @error('deskripsi')
+                <span class="invalid-feedback">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <div class="form-group">
             <label>Foto</label>
             <input type="file" wire:model="gambar" class="form-control
             @error('gambar') is-invalid @enderror">
@@ -29,6 +40,6 @@
         </div>
 
         <button type="submit" class="btn btn-success">Simpan</button>
-
+        <br><br>
     </form>
 </div>

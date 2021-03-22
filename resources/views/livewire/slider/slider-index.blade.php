@@ -26,6 +26,7 @@
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama Produk</th>
+                <th scope="col">Deskripsi</th>
                 <th scope="col">Foto</th>
                 <th scope="col">Actions</th>
             </tr>
@@ -35,6 +36,7 @@
             <tr>
                 <td scope="row">{{ $loop->iteration }}</td>
                 <td>{{ $data->judul }}</td>
+                <td>{{ $data->deskripsi }}</td>
                 <td>
                     <img src="{{ url('storage/photos/'.$data->gambar)}}" width="100">
                 </td>

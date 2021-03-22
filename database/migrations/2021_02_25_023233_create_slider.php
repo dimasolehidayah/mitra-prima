@@ -16,6 +16,7 @@ class CreateSlider extends Migration
         Schema::create('slider', function (Blueprint $table) {
             $table->increments('id');
             $table->string('judul',50);
+            $table->string('deskripsi',255);
             $table->string('gambar',50);
             $table->unsignedBigInteger('update_by');
             $table->foreign('update_by')->references('id')->on('users');

@@ -77,13 +77,8 @@
                     <div class="carousel-container">
                         <div class="container carousel-caption">
                             <div class="text">
-                            <h2 class="animate__animated animate__fadeInDown">Welcome</h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                aliquid. Sequi ea
-                                ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique
-                                ea voluptatem.
-                                Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.
-                            </p>
+                            <h2 class="animate__animated animate__fadeInDown">{{ $data->judul }}</h2>
+                            <p class="animate__animated animate__fadeInUp">{{ $data->deskripsi }}</p>
                             </div>
                         </div>
                     </div>
@@ -182,7 +177,7 @@
                                 <img src="{{ url('storage/photos/'.$data->foto)}}" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <h4>{{ $data->harga }}</h4>
+                                <h4>Rp. {{ $data->harga }}</h4>
                                 <p>{{ $data->deskripsi }}</p>
                             </div>
                         </div>
