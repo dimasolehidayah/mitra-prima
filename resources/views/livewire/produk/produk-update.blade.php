@@ -1,9 +1,8 @@
 @section('title','Update Produk')
 @section('header','Update Produk')
 
-
-
 <div class="container">
+    <br>
     <form wire:submit.prevent="update">
         <input type="hidden" name="" wire:model="produkId">
         <div class="form-group">
@@ -11,9 +10,9 @@
             <input type="file" wire:model="foto" class="form-control
             @error('foto') is-invalid @enderror">
             @error('foto')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
+            <span class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
         </div>
         <div class="form-group">
@@ -27,9 +26,9 @@
         </select>
 
             @error('id_kategori')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
+            <span class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
         </div>
         <div class="form-group">
@@ -37,9 +36,9 @@
             <input type="text" wire:model="no_hp" class="form-control
             @error('no_hp') is-invalid @enderror">
             @error('no_hp')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
+            <span class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
         </div>
         <div class="form-group">
@@ -47,9 +46,9 @@
             <input type="text" wire:model="harga" class="form-control
             @error('harga') is-invalid @enderror">
             @error('harga')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
+            <span class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
         </div>
         <div class="form-group">
@@ -57,15 +56,14 @@
             <input type="text" wire:model="stok" class="form-control
             @error('stok') is-invalid @enderror">
             @error('stok')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
+            <span class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
         </div>
 
         <button type="submit" class="btn btn-success">Simpan</button>
-
+        <br>
+        <br>
     </form>
 </div>
-
-

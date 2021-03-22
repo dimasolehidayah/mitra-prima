@@ -175,7 +175,8 @@
                         <div class="member">
                             <h4 class="mt-3 mb-3">{{ $data->nama_produk }}</h4>
                             <div class="member-img">
-                                <img src="{{ url('storage/photos/'.$data->foto)}}" class="img-fluid" alt="" width="400px">
+                                <img src="{{ url('storage/photos/'.$data->foto)}}" class="img-fluid" alt=""
+                                    width="400px">
                             </div>
                             <div class="member-info">
                                 <h4>Rp. {{ $data->harga }}</h4>
@@ -293,7 +294,7 @@
     <div style="position:fixed;padding:5px;right:0px;top:200px;background-color:green;width:60px;border-radius: 10%;">
         <h1 style="font-size:10px;color:white;text-align:center;">klik untuk whatsapp</h1>
         <a href="https://api.whatsapp.com/send?phone=+6285237965968&text=Halo saya tertarik membeli">
-        <img width="50px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
+            <img width="50px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
     </div>
 
     <!-- Vendor JS Files -->

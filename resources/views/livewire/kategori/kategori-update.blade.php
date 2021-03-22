@@ -2,6 +2,7 @@
 @section('header','Update Kategori')
 
 <div class="container">
+    <br>
     <form wire:submit.prevent="update">
         <input type="hidden" name="kategoriId" wire:model="kategoriId">
         <div class="form-group">
@@ -9,9 +10,9 @@
             <input type="text" wire:model="nama_produk" class="form-control
             @error('nama_produk') is-invalid @enderror">
             @error('nama_produk')
-                <span class="invalid-feedback">
-                    <strong>{{ $message }}</strong>
-                </span>
+            <span class="invalid-feedback">
+                <strong>{{ $message }}</strong>
+            </span>
             @enderror
         </div>
 
@@ -23,12 +24,11 @@
             <span class="invalid-feedback">
                 <strong>{{ $message }}</strong>
             </span>
-        @enderror
+            @enderror
         </div>
 
         <button type="submit" class="btn btn-success">Simpan</button>
-
+        <br>
+        <br>
     </form>
 </div>
-
-
