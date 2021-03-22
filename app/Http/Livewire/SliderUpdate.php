@@ -11,6 +11,7 @@ class SliderUpdate extends Component
     use WithFileUploads;
 
     public $judul;
+    public $deskripsi;
     public $gambar;
     public $gambarlama;
     public $sliderId;
@@ -29,15 +30,18 @@ class SliderUpdate extends Component
         if ($slider) {
             $this->sliderId = $slider['id'];
             $this->judul = $slider['judul'];
+            $this->deskripsi = $slider['deskripsi'];
             $this->gambarlama = $slider['gambar'];
         }
     }
     protected $rules = [
 
         'judul' => 'required|min:2',
+        'deskripsi' => 'required',
     ];
     protected $messages = [
-        'judul.required' => 'nama required',
+        'judul.required' => 'judul required',
+        'deskripsi.required' => 'deskripsi required',
         'judul.min' => 'min 2 character',
     ];
     public function update()

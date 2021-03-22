@@ -12,6 +12,7 @@ class SliderCreate extends Component
     use WithFileUploads;
 
     public $judul;
+    public $deskripsi;
     public $gambar;
 
     public function render()
@@ -27,10 +28,12 @@ class SliderCreate extends Component
     protected $rules = [
 
         'judul' => 'required|min:2',
+        'deskripsi' => 'required',
         'gambar' => 'image|mimes:png,jpg,bmp,jpeg',
     ];
     protected $messages = [
-        'judul.required' => 'nama required',
+        'judul.required' => 'judul required',
+        'deskripsi.required' => 'deskripsi required',
         'judul.min' => 'min 2 character',
         'gambar.image' => 'foto required',
         'gambar.mimes' => 'foto extension jpg,png,jpeg,bmp',
@@ -46,6 +49,7 @@ class SliderCreate extends Component
 
         Slider::create([
             'judul' => $this->judul,
+            'deskripsi' => $this->deskripsi,
             'gambar' => $data['gambar'],
             'update_by' => Auth::user()->id,
         ]);
@@ -53,3 +57,4 @@ class SliderCreate extends Component
         redirect('/slider');
     }
 }
+
