@@ -52,10 +52,10 @@
                         @enderror
                     </div>
                     <!-- Form Group (no hp)-->
-                    <div class="form-group">
-                        <label class="small mb-1">No Hp</label>
-                        `
-                        <input type="text" wire:model="no_hp" class="form-control
+                    <label class="small mb-1">No Hp</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">+62</span>
+                        <input type="text" wire:model="no_hp" aria-describedby="basic-addon1" class="form-control
                             @error('no_hp') is-invalid @enderror">
                         @error('no_hp')
                         <span class="invalid-feedback">
@@ -76,9 +76,8 @@
                     </div>
                     <div class="form-group">
                         <label class="small mb-1">Jam Buka</label>
-                        <textarea type="text" wire:model="jam"
-                            class="form-control @error('jam') is-invalid @enderror" id="exampleFormControlTextarea1"
-                            rows="3"></textarea>
+                        <textarea type="text" wire:model="jam" class="form-control @error('jam') is-invalid @enderror"
+                            id="exampleFormControlTextarea1" rows="3"></textarea>
                         @error('jam')
                         <span class="invalid-feedback">
                             <strong>{{ $message }}</strong>
