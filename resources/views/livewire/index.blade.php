@@ -291,10 +291,9 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-short"></i></a>
         @foreach ($setting as $data)
-        <div style="position:fixed;padding:5px;right:0px;top:200px;background-color:green;width:60px;border-radius: 10%;">
-            <h1 style="font-size:10px;color:white;text-align:center;">klik untuk whatsapp</h1>
+        <div style="position:fixed;padding:5px;right:60px;top:543px;background-color:green;width:40px;border-radius: 10%;">
             <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text=Halo saya tertarik membeli">
-                <img width="50px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
+                <img width="30px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
         </div>
         @endforeach
 
