@@ -18,7 +18,7 @@ class CreateKategori extends Migration
             $table->string('nama_produk',100);
             $table->text('deskripsi');
             $table->unsignedBigInteger('created_by');
-            $table->foreign('created_by')->references('id')->on('users');
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('update_by');
             $table->foreign('update_by')->references('id')->on('users');
             $table->timestamps();

@@ -23,7 +23,7 @@ class CreateProduk extends Migration
             $table->integer('harga');
             $table->integer('stok');
             $table->unsignedBigInteger('created_by');
-            $table->foreign('created_by')->references('id')->on('users');
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('update_by');
             $table->foreign('update_by')->references('id')->on('users');
             $table->timestamps();
