@@ -19,7 +19,6 @@ class CreateProduk extends Migration
             $table->text('deskripsi')->nullable();
             $table->string('foto',100);
             $table->integer('id_kategori');
-            $table->string('no_hp',20);
             $table->integer('harga');
             $table->integer('stok');
             $table->unsignedBigInteger('created_by');

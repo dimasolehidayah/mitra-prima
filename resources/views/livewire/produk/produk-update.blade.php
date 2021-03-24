@@ -32,16 +32,6 @@
             @enderror
         </div>
         <div class="form-group">
-            <label>No Handphone</label>
-            <input type="text" wire:model="no_hp" class="form-control
-            @error('no_hp') is-invalid @enderror">
-            @error('no_hp')
-            <span class="invalid-feedback">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
-        </div>
-        <div class="form-group">
             <label>Harga</label>
             <input type="text" wire:model="harga" class="form-control
             @error('harga') is-invalid @enderror">

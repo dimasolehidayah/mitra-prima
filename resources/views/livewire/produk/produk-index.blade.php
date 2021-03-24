@@ -42,7 +42,6 @@
                 <th scope="col">Judul</th>
                 <th scope="col">Deskripsi</th>
                 <th scope="col">Foto</th>
-                <th scope="col">No Handphone</th>
                 <th scope="col">Harga</th>
                 <th scope="col">Stok</th>
                 <th scope="col">Actions</th>
@@ -57,7 +56,6 @@
                 <td>
                     <img src="{{ url('storage/photos/'.$data->foto)}}" width="100">
                 </td>
-                <td>+62{{ $data->no_hp }}</td>
                 <td>Rp.{{ $data->harga }}</td>
                 <td>{{ $data->stok }}</td>
                 <td>

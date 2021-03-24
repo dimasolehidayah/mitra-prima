@@ -16,7 +16,6 @@ class ProdukUpdate extends Component
     public $foto;
     public $fotolama;
     public $id_kategori;
-    public $no_hp;
     public $harga;
     public $stok;
 
@@ -31,15 +30,12 @@ class ProdukUpdate extends Component
 
     protected $rules = [
         'id_kategori' => 'required',
-        'no_hp' => 'required|max:20',
         'stok' => 'required',
         'harga' => 'required',
     ];
     protected $messages = [
         'deskripsi.required' => 'deskripsi required',
         'id_kategori.required' => 'id kategori required',
-        'no_hp.required' => 'no_handphone required',
-        'no_hp.max' => 'max 20 character',
         'stok' => 'stok required',
         'harga' => 'harga required',
     ];
@@ -52,7 +48,6 @@ class ProdukUpdate extends Component
             $this->produkId = $produk['id'];
             $this->fotolama = $produk['foto'];
             $this->id_kategori = $produk['id_kategori'];
-            $this->no_hp = $produk['no_hp'];
             $this->stok = $produk['stok'];
             $this->harga = $produk['harga'];
         }
