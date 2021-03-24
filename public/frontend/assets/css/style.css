@@ -723,12 +723,14 @@ section {
     background: #fff;
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
     transition: 0.3s;
+    width: 130%;
 }
 
 .team .member .member-img {
     position: relative;
     overflow: hidden;
     padding: 20px;
+    
 }
 
 .team .member .member-img:after {
@@ -819,6 +821,8 @@ section {
 }
 
 .services .icon-box {
+    width: 400px;
+    height: 200px;
     padding: 30px;
     position: relative;
     overflow: hidden;

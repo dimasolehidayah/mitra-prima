@@ -39,7 +39,7 @@ Route::get('/index', Index::class);
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-    
+
 Route::get('/dashboard', Dashboard::class)->name('home');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

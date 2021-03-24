@@ -18846,13 +18846,13 @@ body {
   color: #a2acba;
 }
 .sidenav-light .sidenav-menu .nav-link:hover {
-  color: #0061f2;
+  color: #ff2929;
 }
 .sidenav-light .sidenav-menu .nav-link.active {
-  color: #0061f2;
+  color: #ff2929;
 }
 .sidenav-light .sidenav-menu .nav-link.active .nav-link-icon {
-  color: #0061f2;
+  color: #ff2929;
 }
 .sidenav-light .sidenav-menu-nested {
   border-left-color: #d7dce3;
