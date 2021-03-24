@@ -10,6 +10,10 @@
     <title>@yield('title') - Mitra Prima</title>
     <link href="{{url('template/css/styles.css')}}" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{'template/assets/img/favicon.png'}}" />
+    <script data-search-pseudo-elements defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js" crossorigin="anonymous">
+    </script>
     @livewireStyles
 </head>
 
@@ -108,10 +112,6 @@
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" crossorigin="anonymous"></script>
     <script src="{{'template/assets/demo/date-range-picker-demo.js'}}"></script>
-    <script data-search-pseudo-elements defer
-        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js" crossorigin="anonymous">
-    </script>
     {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script> --}}
     {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
