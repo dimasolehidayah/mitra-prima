@@ -2,7 +2,7 @@
 @section('header','Produk')
 <div>
     <div class="card-header">
-    <a href="/produkCreate" class="btn btn-primary btn-sm">Tambah Data</a>
+    <a href="/produkCreate" class="btn btn-danger btn-sm">Tambah Data</a>
     </div>
     @if (session()->has('message'))
         <div class="alert alert-success" role="alert">

@@ -2844,9 +2844,9 @@ pre code {
 .form-control:focus {
   color: #687281;
   background-color: #fff;
-  border-color: #0061f2;
+  border-color: var(--red);
   outline: 0;
-  box-shadow: 0 0 0 0.0625rem #0061f2;
+  box-shadow: 0 0 0 0.0625rem var(--red);
 }
 .form-control::-moz-placeholder {
   color: #687281;
@@ -6834,7 +6834,9 @@ input[type=button].btn-block {
 .card-header + .list-group .list-group-item:first-child {
   border-top: 0;
 }
-
+.card-header h3{
+    color: var(--red);
+}
 .card-footer {
   padding: 1rem 1.35rem;
   background-color: rgba(31, 45, 65, 0.03);

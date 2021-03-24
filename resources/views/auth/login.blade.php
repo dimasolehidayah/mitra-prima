@@ -19,7 +19,7 @@
     </script>
 </head>
 
-<body class="bg-primary">
+<body class="bg-danger">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
@@ -73,7 +73,7 @@
                                             class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                             <a class="small" href="auth-password-basic.html">Forgot Password?</a>
                                             {{-- <a class="btn btn-primary" href="index-2.html">Login</a> --}}
-                                            <button type="submit" class="btn btn-primary" href="/">
+                                            <button type="submit" class="btn btn-danger" href="/">
                                                 {{ __('Login') }}
                                             </button>
                                                 </div>

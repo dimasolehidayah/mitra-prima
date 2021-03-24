@@ -6,7 +6,7 @@
     <div class="col-xl-4">
         <!-- Profile picture card-->
         <div class="card">
-            <div class="card-header">Pengaturan Logo</div>
+            <div class="card-header"><h3>Pengaturan Logo</h3></div>
             <div class="card-body text-center">
                 <!-- Profile picture image-->
                 <img class="img-account-profile mb-4" src="{{ url('/'.'storage/photos/'.$data->logo) }}"
@@ -14,7 +14,7 @@
                 <!-- Profile picture help block-->
                 {{-- <div class="small font-italic text-muted mb-4">Klik untuk mengganti</div> --}}
                 <!-- Profile picture upload button-->
-                <label class="btn btn-primary">Ganti Logo
+                <label class="btn btn-danger">Ganti Logo
                     <input type="file" hidden wire:model="logo" class="form-control
                 @error('logo') is-invalid @enderror"></label>
                 @error('logo')
@@ -29,7 +29,7 @@
     <div class="col-xl-8">
         <!-- Account details card-->
         <div class="card mb-4">
-            <div class="card-header">Pengaturan Website</div>
+            <div class="card-header"><h3>Pengaturan Website</h3></div>
             <div class="card-body">
                 @if (session()->has('message'))
                 <div class="alert alert-success" role="alert">
@@ -107,7 +107,7 @@
                         @enderror
                     </div>
                     <!-- Save changes button-->
-                    <button class="btn btn-primary" type="submit">Simpan</button>
+                    <button class="btn btn-danger" type="submit">Simpan</button>
                 </form>
             </div>
         </div>

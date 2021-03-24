@@ -3,7 +3,7 @@
 <div>
         <div class="card-header">
 
-            <button type="button" class="btn btn-primary" wire:click.prevent="ClearForm" data-toggle="modal" data-target="#adduser">
+            <button type="button" class="btn btn-danger" wire:click.prevent="ClearForm" data-toggle="modal" data-target="#adduser">
                 Tambah Pengguna
             </button>
 

@@ -21,7 +21,7 @@
     </script>
 </head>
 
-<body class="bg-primary">
+<body class="bg-danger">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
@@ -81,7 +81,7 @@
                                         </div>
                                         <!-- Form Group (create account submit)-->
                                         <div class="form-group mt-4 mb-0">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button type="submit" class="btn btn-danger">
                                             {{ __('Register') }}
                                         </button>
                                         </div>
