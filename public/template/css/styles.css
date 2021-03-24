@@ -2955,6 +2955,9 @@ textarea.form-control {
 .form-group {
   margin-bottom: 1rem;
 }
+.form-group p{
+    color: var(--red);
+}
 
 .form-text {
   display: block;
@@ -6845,7 +6848,9 @@ input[type=button].btn-block {
 .card-footer:last-child {
   border-radius: 0 0 0.35rem 0.35rem;
 }
-
+.card-footer h5{
+    color: var(--red);
+}
 .card-header-tabs {
   margin-right: -0.675rem;
   margin-bottom: -1rem;

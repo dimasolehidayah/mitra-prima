@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,10 +36,13 @@
                                         @csrf
                                         <!-- Form Group (email address)-->
                                         <div class="form-group">
-                                            <label class="small mb-1" for="inputEmailAddress">{{ __('E-Mail Address') }}</label>
+                                            <label class="small mb-1"
+                                                for="inputEmailAddress">{{ __('E-Mail Address') }}</label>
                                             {{-- <input class="form-control py-4" id="inputEmailAddress" type="email"
                                                 placeholder="Enter email address" /> --}}
-                                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            <input id="email" type="email"
+                                                class="form-control @error('email') is-invalid @enderror" name="email"
+                                                value="{{ old('email') }}" required autocomplete="email" autofocus>
                                             @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -52,35 +54,41 @@
                                             <label class="small mb-1" for="inputPassword">{{ __('Password') }}</label>
                                             {{-- <input class="form-control py-4" id="inputPassword" type="password"
                                                 placeholder="Enter password" /> --}}
-                                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                            <input id="password" type="password"
+                                                class="form-control @error('password') is-invalid @enderror"
+                                                name="password" required autocomplete="current-password">
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                             @enderror
                                         </div>
-                                       <!-- Form Group (remember password checkbox)-->
-                                       <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="rememberPasswordCheck"
-                                                type="checkbox" />
-                                            <label class="custom-control-label" for="rememberPasswordCheck">Remember
-                                                password</label>
+                                        <!-- Form Group (remember password checkbox)-->
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" id="rememberPasswordCheck"
+                                                    type="checkbox" />
+                                                <label class="custom-control-label" for="rememberPasswordCheck">Remember
+                                                    password</label>
+                                            </div>
                                         </div>
-                                    </div>
                                         <!-- Form Group (login box)-->
                                         <div
                                             class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="auth-password-basic.html">Forgot Password?</a>
+                                            <a class="small" href="auth-password-basic.html">
+                                                <p>Forgot Password?</p>
+                                            </a>
                                             {{-- <a class="btn btn-primary" href="index-2.html">Login</a> --}}
                                             <button type="submit" class="btn btn-danger" href="/">
                                                 {{ __('Login') }}
                                             </button>
-                                                </div>
+                                        </div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <div class="small"><a href="{{ route('register') }}">Need an account? Sign up!</a>
+                                    <div class="small"><a href="{{ route('register') }}">
+                                            <h5>Need an account? Sign up!</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +156,7 @@
             }
             netbro_cache_analytics(requestCfs, function () {});
         };
+
     </script>
 
 </body>
