@@ -17,7 +17,6 @@ use App\Http\Livewire\Setting;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Index;
-use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
