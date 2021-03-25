@@ -293,13 +293,8 @@
         <i class="bi bi-arrow-up-short"></i></a>
     @foreach ($setting as $data)
     <div
-<<<<<<< Updated upstream
         style="position:fixed;padding:5px;right:60px;bottom:2.4%;background-color:green;width:40px;border-radius: 10%;">
         <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text=Halo saya tertarik membeli">
-=======
-        style="position:fixed;padding:5px;right:60px;bottom:2.5%;background-color:green;width:40px;border-radius: 10%;">
-        <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{ $data->pesan }}">
->>>>>>> Stashed changes
             <img width="30px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
     </div>
     @endforeach
