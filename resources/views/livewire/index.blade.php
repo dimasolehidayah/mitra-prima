@@ -206,7 +206,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center" data-aos="zoom-in"
                         data-aos-delay="100">
-                        <div class="icon-box" >
+                        <div class="icon-box">
                             <div class="icon"><i class='bx bx-time-five'></i></div>
                             <h4 class="title"><a href="">Jam Buka</a></h4>
                             <p class="description">{{ $data->jam }}</p>
@@ -290,12 +290,13 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-short"></i></a>
-        @foreach ($setting as $data)
-        <div style="position:fixed;padding:5px;right:60px;top:543px;background-color:green;width:40px;border-radius: 10%;">
-            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text=Halo saya tertarik membeli">
-                <img width="30px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
-        </div>
-        @endforeach
+    @foreach ($setting as $data)
+    <div
+        style="position:fixed;padding:5px;right:60px;bottom:2.5%;background-color:green;width:40px;border-radius: 10%;">
+        <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text=Halo saya tertarik membeli">
+            <img width="30px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
+    </div>
+    @endforeach
 
     <!-- Vendor JS Files -->
     <script src="{{url('frontend/assets/vendor/aos/aos.js')}}"></script>

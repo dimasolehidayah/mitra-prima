@@ -17062,12 +17062,12 @@ body {
   cursor: pointer;
 }
 
-.no-highlight {
+/* .no-highlight {
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
-}
+} */
 
 .lift {
   box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);
