@@ -13,7 +13,7 @@ class Index extends Component
     {
         return view('livewire.index',[
             'setting' => Setting::latest()->get(),
-            'produk' => Produk::latest('Produk.created_at')->leftJoin('Kategori', 'Kategori.id_kategori', '=', 'Produk.id_kategori')->get(),
+            'produk' => Produk::latest('produk.created_at')->leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->get(),
             'slider' => Slider::latest()->get(),
         ])->extends('index');
     }
