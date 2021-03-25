@@ -274,11 +274,12 @@
                         <h4>Social Media Kami</h4>
                         <p>Ikuti sosial media kami untuk mendapatkan setiap informasi terbaru dari kami</p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            @foreach ($setting as $data)
+                            <a href="{{ $data->fb }}" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="{{ $data->instagram }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="{{ $data->youtube }}" class="youtube"><i class="bx bxl-youtube"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                            @endforeach
                         </div>
                     </div>
 
@@ -292,8 +293,13 @@
         <i class="bi bi-arrow-up-short"></i></a>
     @foreach ($setting as $data)
     <div
+<<<<<<< Updated upstream
         style="position:fixed;padding:5px;right:60px;bottom:2.4%;background-color:green;width:40px;border-radius: 10%;">
         <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text=Halo saya tertarik membeli">
+=======
+        style="position:fixed;padding:5px;right:60px;bottom:2.5%;background-color:green;width:40px;border-radius: 10%;">
+        <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{ $data->pesan }}">
+>>>>>>> Stashed changes
             <img width="30px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
     </div>
     @endforeach

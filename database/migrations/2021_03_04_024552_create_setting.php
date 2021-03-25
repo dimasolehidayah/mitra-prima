@@ -22,6 +22,10 @@ class CreateSetting extends Migration
             $table->string('email');
             $table->text('alamat');
             $table->text('jam');
+            $table->text('fb');
+            $table->text('youtube');
+            $table->text('instagram');
+            $table->text('pesan');
             $table->unsignedBigInteger('created_by');
             $table->foreign('created_by')->references('id')->on('users');
             $table->unsignedBigInteger('update_by');

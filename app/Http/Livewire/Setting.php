@@ -19,6 +19,10 @@ class Setting extends Component
     public $email;
     public $jam;
     public $no_hp;
+    public $fb;
+    public $instagram;
+    public $youtube;
+    public $pesan;
     public $alamat;
     public $logolama;
 
@@ -28,8 +32,12 @@ class Setting extends Component
         // 'logo' => 'image|mimes:png,jpg,bmp,jpeg',
         'email' => 'required',
         'jam' => 'required',
+        'fb' => 'required',
+        'instagram' => 'required',
+        'youtube' => 'required',
         'no_hp' => 'required|max:20',
         'alamat' => 'required',
+        'pesan' => 'required',
     ];
     protected $messages = [
         'nama_website.required' => 'nama required',
@@ -41,7 +49,11 @@ class Setting extends Component
         'no_hp.required' => 'no_handphone required',
         'no_hp.max' => 'max 20 character',
         'alamat' => 'alamat required',
+        'fb' => 'facebook required',
+        'instagram' => 'instagram required',
+        'youtube' => 'youtube required',
         'jam' => 'jam required',
+        'pesan' => 'pesan required',
     ];
     public function updated($propertyName)
     {
@@ -57,6 +69,10 @@ class Setting extends Component
             $this->alamat = $setting->alamat;
             $this->email = $setting->email;
             $this->jam = $setting->jam;
+            $this->fb = $setting->fb;
+            $this->instagram = $setting->instagram;
+            $this->youtube = $setting->youtube;
+            $this->pesan = $setting->pesan;
             $this->logolama = $setting->logo;
         }
     }
@@ -80,6 +96,10 @@ class Setting extends Component
                     'no_hp' => $this->no_hp,
                     'alamat' => $this->alamat,
                     'jam' => $this->jam,
+                    'fb' => $this->fb,
+                    'instagram' => $this->instagram,
+                    'youtube' => $this->youtube,
+                    'pesan' => $this->pesan,
                     'created_by' => Auth::user()->id,
                     'update_by' => Auth::user()->id,
                 ]);

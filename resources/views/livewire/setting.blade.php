@@ -6,11 +6,13 @@
     <div class="col-xl-4">
         <!-- Profile picture card-->
         <div class="card">
-            <div class="card-header"><h3>Pengaturan Logo</h3></div>
+            <div class="card-header">
+                <h3>Pengaturan Logo</h3>
+            </div>
             <div class="card-body text-center">
                 <!-- Profile picture image-->
-                <img class="img-account-profile mb-4" src="{{ url('/'.'storage/photos/'.$data->logo) }}"
-                    width="250px" />
+                {{-- <img class="img-account-profile mb-4" src="{{ url('/'.'storage/photos/'.$data->logo) }}"
+                width="250px" /> --}}
                 <!-- Profile picture help block-->
                 {{-- <div class="small font-italic text-muted mb-4">Klik untuk mengganti</div> --}}
                 <!-- Profile picture upload button-->
@@ -29,7 +31,9 @@
     <div class="col-xl-8">
         <!-- Account details card-->
         <div class="card mb-4">
-            <div class="card-header"><h3>Pengaturan Website</h3></div>
+            <div class="card-header">
+                <h3>Pengaturan Website</h3>
+            </div>
             <div class="card-body">
                 @if (session()->has('message'))
                 <div class="alert alert-success" role="alert">
@@ -40,40 +44,22 @@
                 </div>
                 @endif
                 <form wire:submit.prevent="store">
+
                     <!-- Form Group (name)-->
                     <div class="form-group">
                         <label class="small mb-1">Nama Website</label>
                         <input type="text" wire:model="nama_website" class="form-control
-                @error('nama_website') is-invalid @enderror">
+                        @error('nama_website') is-invalid @enderror">
                         @error('nama_website')
                         <span class="invalid-feedback">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                     </div>
+
                     <!-- Form Group (no hp)-->
-                    <label class="small mb-1">No Hp</label>
-                    <div class="input-group">
-                        <span class="input-group-text" id="basic-addon1">+62</span>
-                        <input type="text" wire:model="no_hp" aria-describedby="basic-addon1" class="form-control
-                            @error('no_hp') is-invalid @enderror">
-                        @error('no_hp')
-                        <span class="invalid-feedback">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <!-- Form Group (email address)-->
-                    <div class="form-group">
-                        <label class="small mb-1">Email</label>
-                        <input type="email" wire:model="email" class="form-control
-                        @error('email') is-invalid @enderror">
-                        @error('email')
-                        <span class="invalid-feedback">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
+
+
                     <div class="form-group">
                         <label class="small mb-1">Jam Buka</label>
                         <textarea type="text" wire:model="jam" class="form-control @error('jam') is-invalid @enderror"
@@ -84,6 +70,7 @@
                         </span>
                         @enderror
                     </div>
+
                     <div class="form-group">
                         <label class="small mb-1">Alamat</label>
                         <textarea type="text" wire:model="alamat"
@@ -95,6 +82,7 @@
                         </span>
                         @enderror
                     </div>
+
                     <div class="form-group">
                         <label class="small mb-1">Deskripsi</label>
                         <textarea type="text" wire:model="deskripsi"
@@ -106,8 +94,82 @@
                         </span>
                         @enderror
                     </div>
-                    <!-- Save changes button-->
-                    <button class="btn btn-danger" type="submit">Simpan</button>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>Pengaturan Sosial Media</h3>
+            </div>
+            <div class="card-body">
+                <label class="small mb-1">No Hp</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">+62</span>
+                    <input type="text" wire:model="no_hp" aria-describedby="basic-addon1" class="form-control
+                            @error('no_hp') is-invalid @enderror">
+                    @error('no_hp')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="small mb-1">Pesan WhatsApp</label>
+                    <textarea type="text" wire:model="pesan"
+                        class="form-control @error('pesan') is-invalid @enderror" id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
+                    @error('pesan')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="small mb-1">Link Facebook</label>
+                    <input type="fb" wire:model="fb" class="form-control
+                        @error('fb') is-invalid @enderror">
+                    @error('fb')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="small mb-1">Link Instagram</label>
+                    <input type="instagram" wire:model="instagram" class="form-control
+                        @error('instagram') is-invalid @enderror">
+                    @error('instagram')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="small mb-1">Link Youtube</label>
+                    <input type="youtube" wire:model="youtube" class="form-control
+                        @error('youtube') is-invalid @enderror">
+                    @error('youtube')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <!-- Form Group (email address)-->
+                <div class="form-group">
+                    <label class="small mb-1">Email</label>
+                    <input type="email" wire:model="email" class="form-control
+                        @error('email') is-invalid @enderror">
+                    @error('email')
+                    <span class="invalid-feedback">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <button class="btn btn-danger" type="submit">Simpan</button>
                 </form>
             </div>
         </div>
