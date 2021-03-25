@@ -35,13 +35,13 @@ class Setting extends Component
         'nama_website.required' => 'nama required',
         'nama_website.min' => 'min 2 character',
         'deskripsi.required' => 'deskripsi required',
-        'logo.image' => 'foto required',
-        'logo.mimes' => 'foto extension jpg,png,jpeg,bmp',
-        'email.required' => 'id kategori required',
+        'logo.image' => 'logo required',
+        'logo.mimes' => 'logo extension jpg,png,jpeg,bmp',
+        'email.required' => 'email required',
         'no_hp.required' => 'no_handphone required',
         'no_hp.max' => 'max 20 character',
         'alamat' => 'alamat required',
-        'jam' => 'alamat required',
+        'jam' => 'jam required',
     ];
     public function updated($propertyName)
     {
