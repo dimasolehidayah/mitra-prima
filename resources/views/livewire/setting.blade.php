@@ -11,8 +11,14 @@
             </div>
             <div class="card-body text-center">
                 <!-- Profile picture image-->
-                {{-- <img class="img-account-profile mb-4" src="{{ url('/'.'storage/photos/'.$data->logo) }}"
-                width="250px" /> --}}
+                @if ($data == null)
+                <img class="img-account-profile mb-4 @error('logo') is-invalid @enderror" src="{{ url('/'.'frontend/assets/img/logo_setting.png') }}"
+                width="250px" />
+                @else
+                <img class="img-account-profile mb-4" src="{{ url('/'.'storage/photos/'.$data->logo) }}"
+                width="250px" />
+                @endif
+
                 <!-- Profile picture help block-->
                 {{-- <div class="small font-italic text-muted mb-4">Klik untuk mengganti</div> --}}
                 <!-- Profile picture upload button-->

@@ -48,12 +48,12 @@ class Setting extends Component
         'email.required' => 'email required',
         'no_hp.required' => 'no_handphone required',
         'no_hp.max' => 'max 20 character',
-        'alamat' => 'alamat required',
-        'fb' => 'facebook required',
-        'instagram' => 'instagram required',
-        'youtube' => 'youtube required',
-        'jam' => 'jam required',
-        'pesan' => 'pesan required',
+        'alamat.required' => 'alamat required',
+        'fb.required' => 'facebook required',
+        'instagram.required' => 'instagram required',
+        'youtube.required' => 'youtube required',
+        'jam.required' => 'jam required',
+        'pesan.required' => 'pesan required',
     ];
     public function updated($propertyName)
     {
