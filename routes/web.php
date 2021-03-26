@@ -16,6 +16,7 @@ use App\Http\Livewire\KategoriUpdate;
 use App\Http\Livewire\Setting;
 use App\Http\Livewire\User;
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Detail;
 use App\Http\Livewire\Index;
 
 /*
@@ -34,6 +35,7 @@ Route::get('/', function () {
 });
 
 Route::get('/index', Index::class);
+Route::get('/detail/{id}', Detail::class);
 
 Auth::routes(['register' => false ,'reset' =>false]);
 

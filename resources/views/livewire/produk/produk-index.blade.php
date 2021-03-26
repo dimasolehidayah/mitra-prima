@@ -61,7 +61,7 @@
                 <td>
                     <a href="/produkUpdate/{{$data->id}}" class="btn btn-primary btn-sm">Edit</a>
                     {{-- <button wire:click="getProduk({{$data->id}})" class="btn btn-sm btn-info text-white">Edit</button> --}}
-                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal{{$data->id}}">Delete</button>
                 </td>
             </tr>
             @endforeach
@@ -71,7 +71,7 @@
     </div>
     @foreach ($produk as $d)
      <!-- Modal -->
-     <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div wire:ignore.self class="modal fade" id="exampleModal{{$d->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

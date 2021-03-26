@@ -20,7 +20,7 @@ class ProdukIndex extends Component
     {
         return view('livewire.produk.produk-index', [
             'produk' => $this->search === null ?
-            Produk::latest('produk.created_at')->leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->paginate($this->paginate) :
+            Produk::leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->paginate($this->paginate) :
             Produk::latest()->where('nama_produk', 'like', '%' . $this->search .'%')->paginate($this->paginate)
         ])->extends('layout.template');
     }

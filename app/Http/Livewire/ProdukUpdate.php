@@ -63,7 +63,7 @@ class ProdukUpdate extends Component
             if ($this->foto) {
                 unlink(public_path('storage/photos/') . '/' . $data['foto']);
                 $data = $this->validate([
-                    'foto' => 'image|mimes:png,jpg,bmp,jpeg',
+                    'foto' => 'image|mimes:png,jpg,bmp,jpeg,svg',
                 ]);
 
                 $data['foto'] = md5($this->foto . microtime()) . '.' . $this->foto->extension();

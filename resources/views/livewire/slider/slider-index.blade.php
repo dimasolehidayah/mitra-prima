@@ -42,7 +42,7 @@
                 </td>
                 <td>
                     <a href="/sliderUpdate/{{$data->id}}" class="btn btn-primary btn-sm">Edit</a>
-                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal{{$data->id}}">Delete</button>
                 </td>
             </tr>
             @endforeach
@@ -52,7 +52,7 @@
 
 @foreach ($slider as $s)
 <!-- Modal -->
-<div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div wire:ignore.self class="modal fade" id="exampleModal{{$s->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
        <div class="modal-content">
            <div class="modal-header">

@@ -54,7 +54,7 @@
                 <td>{{ $k->deskripsi }}</td>
                 <td>
                     <a href="/kategoriUpdate/{{$k->id_kategori}}" class="btn btn-primary btn-sm">Edit</a>
-                    <button  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                    <button  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal{{$k->id_kategori}}">Delete</button>
                 </td>
             </tr>
             @endforeach
@@ -65,7 +65,7 @@
 
 @foreach ($kategori as $d)
 <!-- Modal -->
-<div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div wire:ignore.self class="modal fade" id="exampleModal{{$d->id_kategori}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
        <div class="modal-content">
            <div class="modal-header">

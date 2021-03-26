@@ -31,14 +31,14 @@ class ProdukCreate extends Component
     protected $rules = [
         'id_kategori' => 'required',
         'stok' => 'required',
-        'foto' => 'image|mimes:png,jpg,bmp,jpeg',
+        'foto' => 'image|mimes:png,jpg,bmp,jpeg,svg',
         'harga' => 'required',
     ];
     protected $messages = [
         'stok' => 'stok required',
         'harga' => 'harga required',
         'foto.image' => 'foto required',
-        'foto.mimes' => 'foto extension jpg,png,jpeg,bmp',
+        'foto.mimes' => 'foto extension jpg,png,jpeg,bmp,svg',
     ];
 
     public function store()
