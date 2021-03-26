@@ -36,7 +36,7 @@
             </div>
         </div>
         <br>
-        <div class="table-responsive">
+        <div class="table">
             <table class="table table-bordered table-hover table-striped table-sm">
                 <thead class="table-danger">
                     <tr>
