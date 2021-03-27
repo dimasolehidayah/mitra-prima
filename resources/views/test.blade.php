@@ -38,7 +38,7 @@
 </head>
 
 <body>
-
+    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
 
@@ -61,7 +61,37 @@
 
         </div>
     </header><!-- End Header -->
-    @yield('content')
+
+    <section id="team" class="team">
+
+        <div class="container" data-aos="fade-up">
+
+            <header class="section-header text-center text-white mb-4">
+                <h2>Produk</h2>
+            </header>
+            <div class="row gy-4">
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="member">
+                        <h4 class="mt-3 mb-3">{{ $data->nama_produk }}</h4>
+                        <div class="member-img">
+                            <img src="{{ url('storage/photos/'.$data->foto)}}" class="img-fluid" alt=""
+                                width="400px">
+                        </div>
+                        <div class="member-info">
+                            <h4>Rp. {{ number_format($data->harga) }}</h4>
+                            <p>{{ $data->deskripsi }}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section><!-- End Team Section -->
+    <!-- ======= Footer ======= -->
     <footer id="footer">
 
         <div class="footer-top">
@@ -101,7 +131,7 @@
                             <a href="{{ $data->fb }}" class="facebook"><i class="bx bxl-facebook"></i></a>
                             <a href="{{ $data->instagram }}" class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="{{ $data->youtube }}" class="youtube"><i class="bx bxl-youtube"></i></a>
-                            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{ $data->pesan }}" class="whatsapp"><i
+                            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}" class="whatsapp"><i
                                     class="bx bxl-whatsapp"></i></a>
                             @endforeach
                         </div>
@@ -109,16 +139,12 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="copyright">
-              &copy; Copyright <strong><span>PrimaItech</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-              Designed by <a href="#">PrimaItech</a>
-            </div>
-          </div>
     </footer><!-- End Footer -->
 
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
     <script src="{{url('frontend/assets/vendor/aos/aos.js')}}"></script>
     <script src="{{url('frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{url('frontend/assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
