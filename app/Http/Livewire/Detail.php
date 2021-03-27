@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Produk;
 use App\Models\Kategori;
+use App\Models\Setting;
 
 class Detail extends Component
 {
@@ -14,21 +15,18 @@ class Detail extends Component
     public $id_kategori;
     public $harga;
     public $stok;
-    public $produkId;
+    public $produkId, $setting;
 
-    // public function mount($id)
-    // {
-    //    $this->data = Produk::find($id);
+    public function mount($id)
+    {
+       $this->data = Produk::where('id', $id)->latest('produk.created_at')->leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->first();
 
-    // }
+    }
     public function render()
     {
-        $produks =  Produk::orderBy('id','ASC')->first();
         $kategori =  Kategori::orderBy('id_kategori','ASC')->first();
+        $this->setting = Setting::latest()->get();
 
-        return view('livewire.detail',[
-            'produk' => $produks,
-            'kategori' => $kategori
-        ])->extends('detail');
+        return view('livewire.detail')->extends('layout.frontend', ['setting' => $this->setting]);
     }
 }

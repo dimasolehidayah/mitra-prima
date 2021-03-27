@@ -116,33 +116,30 @@
 
                     <div class="col-lg-4">
                         <div class="box" data-aos="fade-up" data-aos-delay="200">
-                            <h1>Lorem, ipsum.</h1>
+                            <h1>Pembelian bahan bangunan</h1>
                             <img src="{{url('frontend/assets/img/svg/Order Confirmation_Monochromatic (1).svg')}}"
                                 class="img-fluid" alt="">
-                            <h3>Ad cupiditate sed est odio</h3>
-                            <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.
+                            <p>Pembelian bahan bangunan dapat dilakukan di mitra prima secara langsung
                             </p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 mt-4 mt-lg-0">
                         <div class="box" data-aos="fade-up" data-aos-delay="400">
-                            <h1>Lorem, ipsum.</h1>
+                            <h1>Pengiriman Bahan</h1>
                             <img src="{{url('frontend/assets/img/svg/Customer Service_Monochromatic.svg')}}"
                                 class="img-fluid" alt="">
-                            <h3>Voluptatem voluptatum alias</h3>
-                            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.
+                            <p>Jasa pengantaran bahan ke tempat pembelian secara langsung
                             </p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 mt-4 mt-lg-0">
                         <div class="box" data-aos="fade-up" data-aos-delay="600">
-                            <h1>Lorem, ipsum.</h1>
+                            <h1>Pemesanan secara online</h1>
                             <img src="{{url('frontend/assets/img/svg/Logistics_Monochromatic.svg')}}" class="img-fluid"
                                 alt="">
-                            <h3>Fugit cupiditate alias nobis.</h3>
-                            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.
+                            <p>Pemesanan dapat dilakukan online tanpa harus datang ke toko
                             </p>
                         </div>
                     </div>

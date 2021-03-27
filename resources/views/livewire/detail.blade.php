@@ -1,4 +1,4 @@
 <div>
-    {{$kategori->nama_produk}}
-    {{$produk->harga}}
+    {{$data->harga}}
+    {{$data->nama_produk}}
 </div>
