@@ -19,12 +19,17 @@ class Detail extends Component
 
     public function mount($id)
     {
-       $this->data = Produk::where('id', $id)->latest('produk.created_at')->leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->first();
+        $check = Produk::find($id);
+        if($check != null){
+            $this->data = Produk::where('id', $id)->latest('produk.created_at')->leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->first();
+        }
 
     }
     public function render()
     {
-        $kategori =  Kategori::orderBy('id_kategori','ASC')->first();
+        if (empty($this->data)) {
+            $this->redirect('/notfound');
+        }
         $this->setting = Setting::latest()->get();
 
         return view('livewire.detail')->extends('layout.frontend', ['setting' => $this->setting])->section('content');
