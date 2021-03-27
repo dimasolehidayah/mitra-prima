@@ -166,8 +166,6 @@
                 <header class="section-header text-center text-white mb-4">
                     <h2>Produk</h2>
                 </header>
-
-
                 <div class="row gy-4">
                     @foreach ($produk as $data)
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="fade-up"
@@ -182,12 +180,11 @@
                                 <h4>Rp. {{ number_format($data->harga) }}</h4>
                                 <p>{{ $data->deskripsi }}</p>
                             </div>
-                            <a href="/detail/{{$data->id}}" class="btn btn-danger">Detail</a>
+                            <a href="/detail/{{$data->id}}" class="btn-learn-more">Detail</a>
                         </div>
                     </div>
                     @endforeach
                 </div>
-
             </div>
 
         </section><!-- End Team Section -->
@@ -279,15 +276,14 @@
                             <a href="{{ $data->fb }}" class="facebook"><i class="bx bxl-facebook"></i></a>
                             <a href="{{ $data->instagram }}" class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="{{ $data->youtube }}" class="youtube"><i class="bx bxl-youtube"></i></a>
-                            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}" class="whatsapp"><i
+                                    class="bx bxl-whatsapp"></i></a>
                             @endforeach
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-
     </footer><!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
