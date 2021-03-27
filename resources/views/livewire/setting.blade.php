@@ -12,24 +12,20 @@
             <div class="card-body text-center">
                 <!-- Profile picture image-->
                 @if ($data == null)
-                <img class="img-account-profile mb-4 @error('logo') is-invalid @enderror" src="{{ url('/'.'frontend/assets/img/logo_setting.png') }}"
-                width="250px" />
-                @else
-                <img class="img-account-profile mb-4" src="{{ url('/'.'storage/photos/'.$data->logo) }}"
-                width="250px" />
-                @endif
-
-                <!-- Profile picture help block-->
-                {{-- <div class="small font-italic text-muted mb-4">Klik untuk mengganti</div> --}}
-                <!-- Profile picture upload button-->
-                <label class="btn btn-danger">Ganti Logo
-                    <input type="file" hidden wire:model="logo" class="form-control
-                @error('logo') is-invalid @enderror"></label>
+                <img class="img-account-profile mb-4 @error('logo') is-invalid @enderror"
+                    src="{{ url('/'.'frontend/assets/img/kosong.jpg') }}" width="250px" />
                 @error('logo')
                 <span class="invalid-feedback">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
+                @else
+                <img class="img-account-profile mb-4" src="{{ url('/'.'storage/photos/'.$data->logo) }}"
+                    width="250px" />
+                @endif
+                <label class="btn btn-danger">Ganti Logo
+                    <input type="file" hidden wire:model="logo" class="form-control
+                @error('logo') is-invalid @enderror"></label>
             </div>
         </div>
     </div>
@@ -121,9 +117,8 @@
 
                 <div class="form-group">
                     <label class="small mb-1">Pesan WhatsApp</label>
-                    <textarea type="text" wire:model="pesan"
-                        class="form-control @error('pesan') is-invalid @enderror" id="exampleFormControlTextarea1"
-                        rows="3"></textarea>
+                    <textarea type="text" wire:model="pesan" class="form-control @error('pesan') is-invalid @enderror"
+                        id="exampleFormControlTextarea1" rows="3"></textarea>
                     @error('pesan')
                     <span class="invalid-feedback">
                         <strong>{{ $message }}</strong>
