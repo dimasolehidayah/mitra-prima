@@ -175,7 +175,6 @@
                             </div>
                             <div class="member-info">
                                 <h4>Rp. {{ number_format($data->harga) }}</h4>
-                                <p>{{ $data->deskripsi }}</p>
                             </div>
                             <a href="/detail/{{$data->id}}" class="btn-learn-more">Detail</a>
                         </div>

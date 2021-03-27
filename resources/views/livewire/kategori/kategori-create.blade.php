@@ -17,8 +17,8 @@
 
         <div class="form-group">
             <label>Deskripsi</label>
-            <input type="text" wire:model="deskripsi" class="form-control
-            @error('deskripsi') is-invalid @enderror">
+            <textarea type="text" wire:model="deskripsi" class="form-control
+            @error('deskripsi') is-invalid @enderror"></textarea>
             @error('deskripsi')
             <span class="invalid-feedback">
                 <strong>{{ $message }}</strong>
