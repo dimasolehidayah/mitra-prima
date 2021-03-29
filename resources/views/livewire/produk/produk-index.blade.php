@@ -56,7 +56,7 @@
                 <td>
                     <img src="{{ url('storage/photos/'.$data->foto)}}" width="100">
                 </td>
-                <td>Rp.{{ $data->harga }}</td>
+                <td>Rp.{{ number_format($data->harga) }}</td>
                 <td>{{ $data->stok }}</td>
                 <td>
                     <a href="/produkUpdate/{{$data->id}}" class="btn btn-primary btn-sm">Edit</a>

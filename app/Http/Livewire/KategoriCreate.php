@@ -27,8 +27,8 @@ class KategoriCreate extends Component
 
     ];
     protected $messages = [
-        'nama_produk.required' => 'nama required',
-        'deskripsi.required' => 'deskripsi required',
+        'nama_produk.required' => 'wajib diisi !!',
+        'deskripsi.required' => 'wajib diisi !!',
     ];
 
     public function store()

@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             <label>Harga</label>
-            <input type="text" wire:model="harga" class="form-control
+            <input type="number" wire:model="harga" class="form-control
             @error('harga') is-invalid @enderror">
             @error('harga')
             <span class="invalid-feedback">
@@ -43,7 +43,7 @@
         </div>
         <div class="form-group">
             <label>Stok</label>
-            <input type="text" wire:model="stok" class="form-control
+            <input type="number" wire:model="stok" class="form-control
             @error('stok') is-invalid @enderror">
             @error('stok')
             <span class="invalid-feedback">
