@@ -32,13 +32,16 @@
 
         <div class="col-lg-4">
           <div class="portfolio-info">
-            <h3>Informasi Produk</h3>
-            <ul>
-              <li><strong>Nama Produk</strong>: {{ $data->nama_produk }}</li>
-              <li><strong>Harga</strong>: {{ $data->harga }}</li>
-              <li><strong>Stok</strong>: {{ $data->stok }}</li>
-              <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{ $data->nama_produk }}">Pesan</a>
-            </ul>
+
+              <h3>Informasi Produk</h3>
+              <ul>
+                  <li><strong>Nama Produk</strong>: {{ $data->nama_produk }}</li>
+                  <li><strong>Harga</strong>: {{ $data->harga }}</li>
+                  <li><strong>Stok</strong>: {{ $data->stok }}</li>
+                  @foreach ($setting as $s)
+                  <a href="https://api.whatsapp.com/send?phone=62{{ $s->no_hp }}&text={{$s->pesan}} {{ $data->nama_produk }}">Pesan</a>
+                  @endforeach
+                </ul>
           </div>
           <div class="portfolio-description">
             <h2>Deskripsi Produk</h2>
