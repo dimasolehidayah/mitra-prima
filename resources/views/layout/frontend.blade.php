@@ -51,10 +51,10 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#layanan">Layanan</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Produk</a></li>
-                    <li><a class="nav-link scrollto " href="#contact">Kontak Kami</a></li>
+                    <li><a class="nav-link scrollto" href="/#">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/#layanan">Layanan</a></li>
+                    <li><a class="nav-link scrollto" href="/#team">Produk</a></li>
+                    <li><a class="nav-link scrollto " href="/#contact">Kontak Kami</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -77,10 +77,10 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Menu</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#layanan">Layanan</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#team">Produk</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kontak kami</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/#layanan">Layanan</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/#team">Produk</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/#contact">Kontak kami</a></li>
                         </ul>
                     </div>
 
