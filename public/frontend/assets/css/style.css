@@ -830,7 +830,7 @@ section {
 .team .member h4 {
     color: #ff2929;
 }
-.team .member .btn-learn-more {
+.team .member a {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -847,7 +847,7 @@ section {
     margin-bottom: 20px;
     border: 2px solid #ff2929;
   }
-.team .member .btn-learn-more:hover {
+.team .member a:hover {
     background: #ff2929;
     color: #fff;
     text-decoration: none;
@@ -918,7 +918,7 @@ section {
   .portfolio-details .portfolio-description p {
     padding: 0;
   }
-  .portfolio-details .portfolio-info .btn-learn-more {
+  .portfolio-details .portfolio-info a {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -936,7 +936,7 @@ section {
     margin-bottom: 30px;
     border: 2px solid #ff2929;
   }
-  .portfolio-details .portfolio-info .btn-learn-more:hover {
+  .portfolio-details .portfolio-info a:hover {
     background: #ff2929;
     color: #fff;
     text-decoration: none;
@@ -951,7 +951,7 @@ section {
 
 .services .icon-box {
     width: 400px;
-    height: 200px;
+    height: 250px;
     padding: 30px;
     position: relative;
     overflow: hidden;

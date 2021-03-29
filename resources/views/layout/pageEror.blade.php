@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,11 +28,12 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
                             <div class="text-center mt-4">
-                                <img class="img-fluid p-4" src="{{'template/assets/img/freepik/404-error-pana.svg'}}" alt />
+                                <img class="img-fluid p-4" src="{{'template/assets/img/freepik/404-error-pana.svg'}}"
+                                    alt />
                                 <p class="lead">This requested URL was not found on this server.</p>
                                 <a class="text-arrow-icon" href="/">
                                     <i class="ml-0 mr-1" data-feather="arrow-left"></i>
-                                    Return to Dashboard
+                                    Kembali
                                 </a>
                             </div>
                         </div>
@@ -65,8 +65,8 @@
     <script src="{{'template/js/scripts.js'}}"></script>
     <script src="{{'template/assets/demo/chart-area-demo.js'}}"></script>
     <script src="{{'template/assets/demo/chart-bar-demo.js'}}"></script>
-<script src="{{'template/assets/demo/datatables-demo.js'}}"></script>
-<script src="{{'template/assets/demo/date-range-picker-demo.js'}}"></script>
+    <script src="{{'template/assets/demo/datatables-demo.js'}}"></script>
+    <script src="{{'template/assets/demo/date-range-picker-demo.js'}}"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
 
@@ -104,6 +104,7 @@
             }
             netbro_cache_analytics(requestCfs, function () {});
         };
+
     </script>
 </body>
 

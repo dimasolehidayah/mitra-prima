@@ -37,7 +37,7 @@
               <li><strong>Nama Produk</strong>: {{ $data->nama_produk }}</li>
               <li><strong>Harga</strong>: {{ $data->harga }}</li>
               <li><strong>Stok</strong>: {{ $data->stok }}</li>
-              <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text=Halo saya tertarik membeli {{ $data->nama_produk }}" class="btn-learn-more">Pesan</a>
+              <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{ $data->nama_produk }}">Pesan</a>
             </ul>
           </div>
           <div class="portfolio-description">

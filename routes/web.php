@@ -38,6 +38,7 @@ Route::get('/notfound', function () {
     return view('layout.pageEror');
 });
 Route::get('/index', Index::class);
+
 Route::get('/detail/{id}', Detail::class);
 
 Auth::routes(['register' => false ,'reset' =>false]);

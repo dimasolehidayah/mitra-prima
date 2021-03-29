@@ -106,7 +106,7 @@
                 <label class="small mb-1">No Hp</label>
                 <div class="input-group">
                     <span class="input-group-text" id="basic-addon1">+62</span>
-                    <input type="text" wire:model="no_hp" aria-describedby="basic-addon1" class="form-control
+                    <input placeholder="Contoh : 81234567890" pattern="[0-9]{11}" type="tel" wire:model="no_hp" aria-describedby="basic-addon1" class="form-control
                             @error('no_hp') is-invalid @enderror">
                     @error('no_hp')
                     <span class="invalid-feedback">
@@ -128,7 +128,7 @@
 
                 <div class="form-group">
                     <label class="small mb-1">Link Facebook</label>
-                    <input type="fb" wire:model="fb" class="form-control
+                    <input placeholder="Contoh : https://www.google.com/" type="url" wire:model="fb" class="form-control
                         @error('fb') is-invalid @enderror">
                     @error('fb')
                     <span class="invalid-feedback">
@@ -139,7 +139,7 @@
 
                 <div class="form-group">
                     <label class="small mb-1">Link Instagram</label>
-                    <input type="instagram" wire:model="instagram" class="form-control
+                    <input placeholder="Contoh : https://www.google.com/" type="url" wire:model="instagram" class="form-control
                         @error('instagram') is-invalid @enderror">
                     @error('instagram')
                     <span class="invalid-feedback">
@@ -150,7 +150,7 @@
 
                 <div class="form-group">
                     <label class="small mb-1">Link Youtube</label>
-                    <input type="youtube" wire:model="youtube" class="form-control
+                    <input placeholder="Contoh : https://www.google.com/" type="url" wire:model="youtube" class="form-control
                         @error('youtube') is-invalid @enderror">
                     @error('youtube')
                     <span class="invalid-feedback">

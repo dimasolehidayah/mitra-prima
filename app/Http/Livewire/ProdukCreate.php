@@ -35,9 +35,10 @@ class ProdukCreate extends Component
         'harga' => 'required',
     ];
     protected $messages = [
-        'stok' => 'stok required',
-        'harga' => 'harga required',
-        'foto.image' => 'foto required',
+        'id_kategori.required' => 'wajib diisi !!',
+        'stok.required' => 'wajib diisi !!',
+        'harga.required' => 'wajib diisi !!',
+        'foto.image' => 'wajib diisi !!',
         'foto.mimes' => 'foto extension jpg,png,jpeg,bmp,svg',
     ];
 

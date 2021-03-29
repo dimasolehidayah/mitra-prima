@@ -32,10 +32,10 @@ class SliderCreate extends Component
         'gambar' => 'image|mimes:png,jpg,bmp,jpeg',
     ];
     protected $messages = [
-        'judul.required' => 'judul required',
-        'deskripsi.required' => 'deskripsi required',
+        'judul.required' => 'wajib diisi !!',
+        'deskripsi.required' => 'wajib diisi !!',
         'judul.min' => 'min 2 character',
-        'gambar.image' => 'foto required',
+        'gambar.image' => 'wajib diisi !!',
         'gambar.mimes' => 'foto extension jpg,png,jpeg,bmp',
     ];
 

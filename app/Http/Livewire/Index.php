@@ -17,7 +17,7 @@ class Index extends Component
             'setting' => Setting::latest()->get(),
             'produk' => Produk::latest('produk.created_at')->leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->get(),
             'slider' => Slider::latest()->get(),
-        ])->extends('layout.frontend');
+        ]);
     }
 
 }

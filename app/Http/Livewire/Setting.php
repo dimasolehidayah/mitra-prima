@@ -40,20 +40,21 @@ class Setting extends Component
         'pesan' => 'required',
     ];
     protected $messages = [
-        'nama_website.required' => 'nama required',
+        'nama_website.required' => 'wajib diisi !!',
         'nama_website.min' => 'min 2 character',
-        'deskripsi.required' => 'deskripsi required',
-        'logo.image' => 'logo required',
+        'deskripsi.required' => 'wajib diisi !!',
+        'logo.image' => 'wajib diisi !!',
         'logo.mimes' => 'logo extension jpg,png,jpeg,bmp',
-        'email.required' => 'email required',
-        'no_hp.required' => 'no_handphone required',
-        'no_hp.max' => 'max 20 character',
-        'alamat.required' => 'alamat required',
-        'fb.required' => 'facebook required',
-        'instagram.required' => 'instagram required',
-        'youtube.required' => 'youtube required',
-        'jam.required' => 'jam required',
-        'pesan.required' => 'pesan required',
+        'email.required' => 'wajib diisi !!',
+        'no_hp.required' => 'wajib diisi !!',
+        // 'no_hp.max' => 'max 13 character',
+        // 'no_hp.min' => 'max 11 character',
+        'alamat.required' => 'wajib diisi !!',
+        'fb.required' => 'wajib diisi !!',
+        'instagram.required' => 'wajib diisi !!',
+        'youtube.required' => 'wajib diisi !!',
+        'jam.required' => 'wajib diisi !!',
+        'pesan.required' => 'wajib diisi !!',
     ];
     public function updated($propertyName)
     {
