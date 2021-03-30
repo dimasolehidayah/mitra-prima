@@ -34,9 +34,9 @@
 
                         <h3>Informasi Produk</h3>
                         <ul>
-                            <li><strong>Nama Produk</strong>: {{ $data->nama_produk }}</li>
-                            <li><strong>Harga</strong>: {{ $data->harga }}</li>
-                            <li><strong>Stok</strong>: {{ $data->stok }}</li>
+                            <li><strong>Nama Produk</strong> : {{ $data->nama_produk }}</li>
+                            <li><strong>Harga</strong> : Rp. {{ number_format($data->harga) }}</li>
+                            <li><strong>Stok</strong> : {{ $data->stok }}</li>
                             @foreach ($setting as $s)
                             <a
                                 href="https://api.whatsapp.com/send?phone=62{{ $s->no_hp }}&text={{$s->pesan}} {{ $data->nama_produk }}">Pesan</a>

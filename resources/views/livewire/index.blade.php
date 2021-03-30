@@ -64,17 +64,17 @@
 
                 <div class="col-lg-4 mt-4 mt-lg-0">
                     <div class="box" data-aos="fade-up" data-aos-delay="400">
-                        <h1>Pengiriman Bahan</h1>
+                        <h1>Pemesanan Secara Online</h1>
                         <img src="{{url('frontend/assets/img/svg/Customer Service_Monochromatic.svg')}}"
                             class="img-fluid" alt="">
-                        <p>Jasa pengantaran bahan ke tempat pembelian secara langsung
+                        <p>Pemesanan dapat dilakukan online tanpa harus datang ke toko
                         </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 mt-4 mt-lg-0">
                     <div class="box" data-aos="fade-up" data-aos-delay="600">
-                        <h1>Pemesanan secara online</h1>
+                        <h1>Pengiriman Bahan</h1>
                         <img src="{{url('frontend/assets/img/svg/Logistics_Monochromatic.svg')}}" class="img-fluid"
                             alt="">
                         <p>Pemesanan dapat dilakukan online tanpa harus datang ke toko
