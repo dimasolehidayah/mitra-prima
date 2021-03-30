@@ -2,9 +2,9 @@
 
 namespace App\Http\Livewire;
 
-
 use Livewire\Component;
 use App\Models\Kategori;
+use App\Models\Setting;
 use Livewire\WithPagination;
 
 class KategoriIndex extends Component
@@ -17,15 +17,6 @@ class KategoriIndex extends Component
 
     protected $paginationTheme = 'bootstrap';
 
-    public function render()
-    {
-        // print_r(Kategori::latest()->paginate($this->paginate));
-        return view('livewire.kategori.kategori-index', [
-            'kategori' => $this->search === null ?
-                Kategori::latest()->paginate($this->paginate) :
-                Kategori::latest()->where('nama_produk', 'like', '%' . $this->search . '%')->paginate($this->paginate)
-        ])->extends('layout.template');
-    }
     public function destroy($id_kategori)
     {
         if ($id_kategori) {
@@ -34,5 +25,14 @@ class KategoriIndex extends Component
             session()->flash('pesan', 'Kategori was delete!');
         }
     }
+    public function render()
+    {
+        $this->setting = Setting::latest()->get();
 
+        return view('livewire.kategori.kategori-index', [
+            'kategori' => $this->search === null ?
+                Kategori::latest()->paginate($this->paginate) :
+                Kategori::latest()->where('nama_produk', 'like', '%' . $this->search . '%')->paginate($this->paginate)
+        ])->extends('layout.template',['setting' => $this->setting]);
+    }
 }

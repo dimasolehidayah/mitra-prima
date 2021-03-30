@@ -32,6 +32,8 @@ class Detail extends Component
         }
         $this->setting = Setting::latest()->get();
 
-        return view('livewire.detail')->extends('layout.frontend', ['setting' => $this->setting])->section('content');
+        return view('livewire.detail')
+        ->extends('layout.frontend', ['setting' => $this->setting])
+        ->section('content');
     }
 }

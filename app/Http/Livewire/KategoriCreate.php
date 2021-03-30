@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Kategori;
+use App\Models\Setting;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,11 +12,6 @@ class KategoriCreate extends Component
     public $nama_produk;
     public $deskripsi;
 
-    public function render()
-    {
-        return view('livewire.kategori.kategori-create')
-            ->extends('layout.template');
-    }
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
@@ -41,8 +37,15 @@ class KategoriCreate extends Component
             'deskripsi' => $this->deskripsi,
             'created_by' => Auth::user()->id,
             'update_by' => Auth::user()->id,
-        ]);
+            ]);
         session()->flash('message', 'Kategori was Store!');
         redirect('/kategori');
+    }
+    public function render()
+    {
+        $this->setting = Setting::latest()->get();
+
+        return view('livewire.kategori.kategori-create')
+            ->extends('layout.template',['setting' => $this->setting]);
     }
 }

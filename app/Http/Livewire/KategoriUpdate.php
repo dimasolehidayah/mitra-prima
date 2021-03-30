@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Kategori;
+use App\Models\Setting;
 use Livewire\Component;
 
 class KategoriUpdate extends Component
@@ -11,13 +12,6 @@ class KategoriUpdate extends Component
     public $kategoriId;
     public $nama_produk;
     public $deskripsi;
-
-
-    public function render()
-    {
-        return view('livewire.kategori.kategori-update')
-            ->extends('layout.template');
-    }
 
     protected $rules = [
         'nama_produk' => 'required',
@@ -47,13 +41,20 @@ class KategoriUpdate extends Component
     public function update()
     {
 
-            $this->kategoriId;
-            $kategori = Kategori::where('id_kategori',$this->kategoriId);
-            $data = $this->validate();
+        $this->kategoriId;
+        $kategori = Kategori::where('id_kategori',$this->kategoriId);
+        $data = $this->validate();
 
-            $kategori->update($data);
-            session()->flash('message', 'Kategori was Updated!');
-            redirect('/kategori', $kategori);
+        $kategori->update($data);
+        session()->flash('message', 'Kategori was Updated!');
+        redirect('/kategori', $kategori);
 
+    }
+    public function render()
+    {
+        $this->setting = Setting::latest()->get();
+
+        return view('livewire.kategori.kategori-update')
+        ->extends('layout.template',['setting' => $this->setting]);
     }
 }

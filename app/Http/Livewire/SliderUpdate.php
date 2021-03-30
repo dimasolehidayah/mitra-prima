@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Slider;
+use App\Models\Setting;
 use Livewire\WithFileUploads;
 
 class SliderUpdate extends Component
@@ -16,11 +17,6 @@ class SliderUpdate extends Component
     public $gambarlama;
     public $sliderId;
 
-    public function render()
-    {
-        return view('livewire.slider.slider-update')
-        ->extends('layout.template');
-    }
 
     public function mount($id)
     {
@@ -56,14 +52,21 @@ class SliderUpdate extends Component
                 unlink(public_path('storage/photos/') . '/' . $data['gambar']);
                 $data = $this->validate([
                     'gambar' => 'image|mimes:png,jpg,bmp,jpeg',
-                ]);
+                    ]);
 
-                $data['gambar'] = md5($this->gambar . microtime()) . '.' . $this->gambar->extension();
-                $this->gambar->storeAs('photos', $data['gambar']);
+                    $data['gambar'] = md5($this->gambar . microtime()) . '.' . $this->gambar->extension();
+                    $this->gambar->storeAs('photos', $data['gambar']);
             }
             $slider->update($data);
             session()->flash('message', 'Contact was Updated!');
             redirect('/slider', $slider);
         }
+    }
+    public function render()
+    {
+        $this->setting = Setting::latest()->get();
+
+        return view('livewire.slider.slider-update')
+        ->extends('layout.template',['setting' => $this->setting]);
     }
 }

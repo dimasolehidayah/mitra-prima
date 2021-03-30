@@ -133,6 +133,7 @@ class Setting extends Component
     {
         // $count = ModelSetting::latest()->count();
         $data = ModelSetting::latest()->first();
+        $this->setting = ModelSetting::latest()->get();
         // // print_r($count);
         // if ($count > 0) {
         //     // $this->update();
@@ -142,6 +143,6 @@ class Setting extends Component
         return view('livewire.setting', [
             'data' => $data
             ])
-            ->extends('layout.template');
+            ->extends('layout.template',['setting' => $this->setting]);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\User as TabelUser;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Hash;
 use Livewire\WithPagination;
 
@@ -99,12 +100,14 @@ class User extends Component
     }
     public function render()
     {
+        $this->setting = Setting::latest()->get();
+
         $users = TabelUser::where('name', 'like', '%' . $this->search . '%')
             ->orwhere('email', 'like', '%' . $this->search . '%')
             ->orderBy('id', 'DESC')
             ->paginate(10);
         return view('livewire.user', ['users' => $users])
-            ->extends('layout.template')
+            ->extends('layout.template',['setting' => $this->setting])
             ->section('content');
     }
 }
