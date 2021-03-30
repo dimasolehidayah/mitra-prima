@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content />
     <meta name="author" content />
-    <title>@yield('title') - Mitra Prima</title>
+    @foreach ($setting as $item)
+    <title>@yield('title') - {{ $item->nama_website }}</title>
+    @endforeach
     <link href="{{url('template/css/styles.css')}}" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{'template/assets/img/MPpng.svg'}}" />
     <script data-search-pseudo-elements defer
@@ -19,7 +21,9 @@
 
 <body class="nav-fixed">
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
-        <a class="navbar-brand" href="#"> Mitra-Prima </a>
+        @foreach ($setting as $item)
+        <a class="navbar-brand" href="#"> {{ $item->nama_website }} </a>
+        @endforeach
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#"><i
                 data-feather="menu"></i></button>
         <ul class="navbar-nav align-items-center ml-auto">
@@ -27,8 +31,7 @@
             <li class="nav-item dropdown no-caret mr-2 dropdown-user">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
                     href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false"><img class="img-fluid"
-                        src="{{url('template/assets/img/user.png')}}" /></a>
+                    aria-expanded="false"><img class="img-fluid" src="{{url('template/assets/img/user.png')}}" /></a>
                 <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up"
                     aria-labelledby="navbarDropdownUserImage">
                     <h6 class="dropdown-header d-flex align-items-center">

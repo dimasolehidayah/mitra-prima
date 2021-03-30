@@ -2,9 +2,9 @@
 
 namespace App\Http\Livewire;
 
-
 use Livewire\Component;
 use App\Models\Produk;
+use App\Models\Setting;
 use Livewire\WithPagination;
 
 class ProdukIndex extends Component
@@ -16,14 +16,6 @@ class ProdukIndex extends Component
 
     protected $paginationTheme = 'bootstrap';
 
-    public function render()
-    {
-        return view('livewire.produk.produk-index', [
-            'produk' => $this->search === null ?
-            Produk::leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->paginate($this->paginate) :
-            Produk::latest()->where('nama_produk', 'like', '%' . $this->search .'%')->paginate($this->paginate)
-        ])->extends('layout.template');
-    }
     public function destroy($id)
     {
         if ($id) {
@@ -42,5 +34,15 @@ class ProdukIndex extends Component
         // print_r($produk->get());
         // echo "Berhasil";
         $this->emit('showProduk', $produk);
+    }
+    public function render()
+    {
+        $this->setting = Setting::latest()->get();
+
+        return view('livewire.produk.produk-index', [
+            'produk' => $this->search === null ?
+            Produk::leftJoin('kategori', 'kategori.id_kategori', '=', 'produk.id_kategori')->paginate($this->paginate) :
+            Produk::latest()->where('nama_produk', 'like', '%' . $this->search .'%')->paginate($this->paginate)
+        ])->extends('layout.template',['setting' => $this->setting]);
     }
 }

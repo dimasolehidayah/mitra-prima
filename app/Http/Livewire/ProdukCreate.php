@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Produk;
 use App\Models\Kategori;
+use App\Models\Setting;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
@@ -17,12 +18,6 @@ class ProdukCreate extends Component
     public $harga;
     public $stok;
 
-    public function render()
-    {
-        return view('livewire.produk.produk-create',
-        [ 'produk' => Kategori::latest()->get()
-        ])->extends('layout.template');
-    }
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
@@ -57,8 +52,17 @@ class ProdukCreate extends Component
             'stok' => $this->stok,
             'created_by' => Auth::user()->id,
             'update_by' => Auth::user()->id,
-        ]);
-        session()->flash('message', 'Produk was Store!');
-        redirect('/produk');
+            ]);
+            session()->flash('message', 'Produk was Store!');
+            redirect('/produk');
+    }
+    public function render()
+    {
+        $this->setting = Setting::latest()->get();
+
+        return view('livewire.produk.produk-create',[
+            'produk' => Kategori::latest()->get()
+        ])
+        ->extends('layout.template',['setting' => $this->setting]);
     }
 }

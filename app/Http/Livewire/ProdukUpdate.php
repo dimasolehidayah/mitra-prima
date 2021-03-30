@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Produk;
 use App\Models\Kategori;
+use App\Models\Setting;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -11,22 +12,12 @@ class ProdukUpdate extends Component
 {
     use WithFileUploads;
 
-
     public $produkId;
     public $foto;
     public $fotolama;
     public $id_kategori;
     public $harga;
     public $stok;
-
-
-    public function render()
-    {
-        return view('livewire.produk.produk-update',
-        [ 'produk' => Kategori::latest()->get()
-        ])->extends('layout.template');
-    }
-
 
     protected $rules = [
         'id_kategori' => 'required',
@@ -64,14 +55,22 @@ class ProdukUpdate extends Component
                 unlink(public_path('storage/photos/') . '/' . $data['foto']);
                 $data = $this->validate([
                     'foto' => 'image|mimes:png,jpg,bmp,jpeg,svg',
-                ]);
+                    ]);
 
-                $data['foto'] = md5($this->foto . microtime()) . '.' . $this->foto->extension();
+                    $data['foto'] = md5($this->foto . microtime()) . '.' . $this->foto->extension();
                 $this->foto->storeAs('photos', $data['foto']);
             }
             $produk->update($data);
             session()->flash('message', 'Produk was Updated!');
             redirect('/produk', $produk);
         }
+    }
+    public function render()
+    {
+        $this->setting = Setting::latest()->get();
+
+        return view('livewire.produk.produk-update',
+        [ 'produk' => Kategori::latest()->get()
+        ])->extends('layout.template',['setting' => $this->setting]);
     }
 }

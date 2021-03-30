@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content />
     <meta name="author" content />
-    <title>Dashboard - SB Admin Pro</title>
+    <title>Mitra Prima</title>
     <link href="{{('/template/css/styles.css')}}" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet"
         crossorigin="anonymous" />
@@ -85,7 +85,7 @@
                                         </div>
                                     </form>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>

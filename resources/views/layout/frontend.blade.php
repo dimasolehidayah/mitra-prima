@@ -101,8 +101,8 @@
                             <a href="{{ $data->fb }}" class="facebook"><i class="bx bxl-facebook"></i></a>
                             <a href="{{ $data->instagram }}" class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="{{ $data->youtube }}" class="youtube"><i class="bx bxl-youtube"></i></a>
-                            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{ $data->pesan }}" class="whatsapp"><i
-                                    class="bx bxl-whatsapp"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{ $data->pesan }}"
+                                class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
                             @endforeach
                         </div>
                     </div>
@@ -111,12 +111,12 @@
         </div>
         <div class="container">
             <div class="copyright">
-              &copy; Copyright <strong><span>PrimaItech</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>PrimaItech</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-              Designed by <a href="#">PrimaItech</a>
+                Designed by <a href="#">PrimaItech</a>
             </div>
-          </div>
+        </div>
     </footer><!-- End Footer -->
 
     <script src="{{url('frontend/assets/vendor/aos/aos.js')}}"></script>
