@@ -60,10 +60,8 @@ h6 {
         width: 90%;
         bottom: unset;
     }
-    
+
 }
-
-
 
 @media (min-width: 481px) and (max-width: 767px) {
     .carousel-caption {
@@ -84,6 +82,9 @@ h6 {
         bottom: 40px;
     }
 }
+
+
+
 @media (min-width: 768px) and (max-width: 992px) {
     .carousel-caption {
         position: absolute;
@@ -100,6 +101,25 @@ h6 {
         position: absolute;
         left: 5%;
         width: 5%;
+        bottom: 40px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+    .carousel-caption {
+        position: absolute;
+        background: #ff2929;
+        left: -50;
+        text-align: left;
+        bottom: 0;
+        height: 490px !important;
+        -webkit-clip-path: polygon(0 0, 0% 100%, 50% 100%);
+        clip-path: polygon(0 0, 0% 100%, 50% 100%);
+    }
+
+    .text {
+        position: absolute;
+        left: 5%;
+        width: 30%;
         bottom: 40px;
     }
 }
