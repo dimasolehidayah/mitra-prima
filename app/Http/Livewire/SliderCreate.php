@@ -22,7 +22,6 @@ class SliderCreate extends Component
     }
 
     protected $rules = [
-
         'judul' => 'required|min:2',
         'deskripsi' => 'required',
         'gambar' => 'image|mimes:png,jpg,bmp,jpeg',

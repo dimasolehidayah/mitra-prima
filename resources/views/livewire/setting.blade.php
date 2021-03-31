@@ -106,7 +106,7 @@
                 <label class="small mb-1">No Hp</label>
                 <div class="input-group">
                     <span class="input-group-text" id="basic-addon1">+62</span>
-                    <input placeholder="Contoh : 81234567890" pattern="[0-9]{11}" type="tel" wire:model="no_hp" aria-describedby="basic-addon1" class="form-control
+                    <input placeholder="Contoh : 81234567890" type="tel" wire:model="no_hp" aria-describedby="basic-addon1" class="form-control
                             @error('no_hp') is-invalid @enderror">
                     @error('no_hp')
                     <span class="invalid-feedback">

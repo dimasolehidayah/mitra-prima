@@ -2,8 +2,8 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-            <br>
             <ol>
+                <br>
                 <li><a href="/">Home</a></li>
                 <li>Detail Produk</li>
             </ol>

@@ -1214,6 +1214,10 @@ section {
     text-decoration: none;
 }
 
+#footer .container {
+    padding-top: 10px;
+}
+
 #footer .copyright {
     text-align: center;
     float: left;

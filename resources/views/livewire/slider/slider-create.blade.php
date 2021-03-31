@@ -1,8 +1,6 @@
 @section('title','Tambah Slider')
 @section('header','Tambah Slider')
 
-
-
 <div class="container">
     <form wire:submit.prevent="store">
         <br>
