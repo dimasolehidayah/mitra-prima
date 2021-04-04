@@ -28,7 +28,7 @@
                             <!-- Basic login form-->
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header justify-content-center">
-                                    <h3 class="font-weight-light my-4">{{ __('Login') }}</h3>
+                                    <img src="{{url('frontend/assets/img/MPpng.svg')}}">
                                 </div>
                                 <div class="card-body">
                                     <!-- Login form-->
@@ -96,12 +96,7 @@
             <footer class="footer mt-auto footer-dark">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6 small">Copyright &#xA9; Your Website 2020</div>
-                        <div class="col-md-6 text-md-right small">
-                            <a href="#!">Privacy Policy</a>
-                            &#xB7;
-                            <a href="#!">Terms &amp; Conditions</a>
-                        </div>
+                        <div class="col-md-6 small">Copyright &#xA9; Mitra-Prima Website 2021</div>
                     </div>
                 </div>
             </footer>
