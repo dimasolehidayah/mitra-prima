@@ -17,11 +17,8 @@ class SliderUpdate extends Component
     public $gambarlama;
     public $sliderId;
 
-
     public function mount($id)
     {
-        // echo "<pre>";
-        // print_r($produk->first()->id);
         $slider = Slider::where('id', $id)->first();
         if ($slider) {
             $this->sliderId = $slider['id'];
@@ -31,7 +28,6 @@ class SliderUpdate extends Component
         }
     }
     protected $rules = [
-
         'judul' => 'required|min:2',
         'deskripsi' => 'required',
     ];
@@ -58,7 +54,7 @@ class SliderUpdate extends Component
                     $this->gambar->storeAs('photos', $data['gambar']);
             }
             $slider->update($data);
-            session()->flash('message', 'Contact was Updated!');
+            session()->flash('message', 'Slider was Updated!');
             redirect('/slider', $slider);
         }
     }

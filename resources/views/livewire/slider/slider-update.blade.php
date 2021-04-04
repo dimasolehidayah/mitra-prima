@@ -1,8 +1,6 @@
 @section('title','Update Slider')
 @section('header','Update Slider')
 
-
-
 <div class="container">
     <form wire:submit.prevent="update">
         <input type="hidden" name="" wire:model="sliderId">

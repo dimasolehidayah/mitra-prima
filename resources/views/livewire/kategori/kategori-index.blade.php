@@ -6,7 +6,7 @@
     <a href="/kategoriCreate" class="btn btn-danger btn-sm">Tambah Data</a>
     </div>
     @if (session()->has('message'))
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success" role="alert" style="width:96%;margin:2%">
             {{ session('message')}}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -14,7 +14,7 @@
         </div>
     @endif
     @if (session()->has('pesan'))
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger" role="alert" style="width:96%;margin:2%">
         {{ session('pesan')}}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>

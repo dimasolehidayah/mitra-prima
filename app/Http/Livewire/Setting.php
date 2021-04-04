@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -110,7 +109,7 @@ class Setting extends Component
             }
         }
 
-        session()->flash('message', 'Produk was Store!');
+        session()->flash('message', 'Setting was Store!');
         redirect('/setting');
     }
     public function update()
@@ -126,7 +125,7 @@ class Setting extends Component
             $this->logo->storeAs('photos', $data['logo']);
         }
         $setting->update($data);
-        session()->flash('message', 'Kategori was Updated!');
+        session()->flash('message', 'Setting was Updated!');
         redirect('/kategori', $setting);
     }
     public function render()
