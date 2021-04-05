@@ -158,7 +158,7 @@
                     <div class="icon-box">
                         <div class="icon"><i class='bx bx-envelope'></i></div>
                         <h4 class="title"><a href="">Kontak</a></h4>
-                        <p class="description">Email : {{ $data->email }}<br>No Hp : {{ $data->no_hp }}</p>
+                        <p class="description">Email : {{ $data->email }}<br>No Hp : 0{{ $data->no_hp }}</p>
                     </div>
                 </div>
 
