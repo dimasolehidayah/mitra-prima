@@ -171,4 +171,18 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i></a>
 
+    @foreach ($setting as $data)
+    <div
+        style="position:fixed;
+               padding:5px;
+               right:60px;
+               bottom:4mm;
+               background-color:green;
+               width:40px;
+               border-radius: 10%;">
+        <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{$data->pesan}}">
+        <img width="30px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
+    </div>
+    @endforeach
+
 @endsection

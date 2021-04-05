@@ -27,8 +27,8 @@
                         <div class="col-lg-5">
                             <!-- Basic login form-->
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header justify-content-center">
-                                    <img src="{{url('frontend/assets/img/MPpng.svg')}}">
+                                <div class="d-flex justify-content-center p-3">
+                                    <img src="{{url('frontend/assets/img/MPpng.svg')}}" class="img-fluid" alt="Responsive image">
                                 </div>
                                 <div class="card-body">
                                     <!-- Login form-->
