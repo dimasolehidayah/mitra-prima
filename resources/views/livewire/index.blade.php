@@ -140,7 +140,7 @@
                     <div class="icon-box">
                         <div class="icon"><i class='bx bx-time-five'></i></div>
                         <h4 class="title"><a href="">Jam Buka</a></h4>
-                        <p class="description">{{ $data->jam }}</p>
+                        <p class="description">{{ $data->jam }}  </p>
                     </div>
                 </div>
 
@@ -175,11 +175,12 @@
     <div
         style="position:fixed;
                padding:5px;
-               right:60px;
+               right:15px;
                bottom:4mm;
                background-color:green;
                width:40px;
-               border-radius: 10%;">
+               border-radius: 10%;
+               z-index: 1;">
         <a href="https://api.whatsapp.com/send?phone=62{{ $data->no_hp }}&text={{$data->pesan}}">
         <img width="30px;" src="{{url('frontend/assets/img/wa.png')}}"></a>
     </div>
